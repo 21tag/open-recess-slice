@@ -10,56 +10,15 @@
 
 	// Global shared styles here
 
-	.highlight {
-  background: #fff699;
-  padding: 0 0.5em;
+#outer-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.prose ul, .prose ol {
-  list-style: outside disc;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-}
-.prose p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-}
-.prose p.small {
-  color: #666;
-  font-size: 0.8125em;
-  line-height: 1.84615em;
-  margin-bottom: 1.84615em;
-}
-.prose p.medium {
-  color: #666;
-  font-size: 0.875em;
-  line-height: 1.71429em;
-  margin-bottom: 1.71429em;
-}
-.prose p:last-child {
-  margin-bottom: 0;
-}
-.prose h1 {
-  font-size: 1.875em;
-  line-height: 1.2em;
-  margin-bottom: 0.4em;
-}
-.prose h2 {
-  font-size: 1.5em;
-  line-height: 1.25em;
-  margin-bottom: 0.5em;
-}
-.prose a {
-  color: #6d7173;
-  border-bottom: 1px solid #a1cfe5;
-  text-decoration: none;
-  outline: none;
-}
-.prose a:focus, .prose a:hover {
-  color: #4ab336;
-  border-bottom-color: #77b36b;
+#inner-wrap {
+  position: relative;
+  width: 100%;
 }
 
 .block {
@@ -115,17 +74,6 @@
 .nav-btn:hover, .nav-btn:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-}
-
-#outer-wrap {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-#inner-wrap {
-  position: relative;
-  width: 100%;
 }
 
 #nav {
@@ -203,26 +151,15 @@
   left: 1.875em;
 }
 
-#main {
-  background: #fff;
-}
-#main .block {
-  padding: 2.625em 1.875em;
-}
-
-footer[role="contentinfo"] {
-  background: #ddd;
-}
-
-
 
 	
 // DESKTOP SHARED STYLES /////////////////////////////////////////////////////////////////////
 
 	@include media(desktop) {
 	
-		// Desktop styles here
-		// .row {width:$row-width} //To keep desktop width fixed
+		
+		#outer-wrap {overflow: visible;} // Overrides default behavior of nav slider
+		.row {width:$row-width !important} // To keep desktop width fixed
 
 		//NAV
 		  #top .nav-btn {
@@ -283,7 +220,7 @@ footer[role="contentinfo"] {
   #nav {
     position: absolute;
     top: 0;
-    padding-top: 5.25em;
+    // padding-top: 5.25em;
   }
   #nav:not(:target) {
     z-index: 1;
@@ -293,6 +230,7 @@ footer[role="contentinfo"] {
     display: block;
   }
   #nav .close-btn {
+    display: none;
     position: absolute;
     top: -3.75em;
     left: 1.875em;
