@@ -1,0 +1,39 @@
+@import "_normalize2.1.2", "foundation", "_tools";
+
+
+// SAMPLE /////////////////////////////////////////////////////////////////////
+
+	// .sample-class {@extend .clearfix;} //Sample of how to do clearfix
+
+
+// GLOBAL SHARED STYLES /////////////////////////////////////////////////////////////////////
+
+	// Global shared styles here
+
+	
+// DESKTOP SHARED STYLES /////////////////////////////////////////////////////////////////////
+
+	@include media(desktop) {
+	
+		// Desktop styles here
+		.row {width:$row-width} //To keep desktop width fixed
+
+	}
+
+// MOBILE SHARED STYLES /////////////////////////////////////////////////////////////////////
+
+	@include media(mobile) {
+	
+		// Mobile styles here
+	
+	}
+
+// RETINA SHARED STYLES /////////////////////////////////////////////////////////////////////
+
+@include retina {
+		
+		//Retina styles here (sample below)
+		//	.sample-class {background:url('../img/performa-logo@2x.png'); background-size:209px auto}
+		// .sample-class-two {background:url('../img/navigation@2x.png'); background-size:634px auto}
+		
+	}
