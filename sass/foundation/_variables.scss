@@ -64,7 +64,7 @@ $em-base: 16px !default;
 $default-float: left;
 
 // $body-bg: #fff;
-// $body-font-color: #222;
+$body-font-color: #333333;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -125,7 +125,7 @@ $default-float: left;
 
 // Media Queries
 
-$small-screen: 768px;
+// $small-screen: 768px;
 // $medium-screen: 1280px;
 // $large-screen: 1440px;
 
@@ -183,12 +183,12 @@ $column-gutter: em-calc(20);
 
 // Control header font sizes
 
-// $h1-font-size: em-calc(44);
-// $h2-font-size: em-calc(37);
-// $h3-font-size: em-calc(27);
-// $h4-font-size: em-calc(23);
-// $h5-font-size: em-calc(18);
-// $h6-font-size: 1em;
+$h1-font-size: 1em;
+$h2-font-size: 1em;
+$h3-font-size: 1em;
+$h4-font-size: 1em;
+$h5-font-size: 1em;
+$h6-font-size: 1em;
 
 // Control how subheaders are styled.
 
