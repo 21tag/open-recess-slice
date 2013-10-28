@@ -27,6 +27,8 @@
 	width: 100%;
 }
 
+/////// START NAV BAR /////////////////////////////////////////////////////////////////////
+
 .block {
 	position: relative;
 	margin: 0 auto;
@@ -117,7 +119,6 @@
 			outline: none;
 			&:focus, &:hover {
 				color: #fff;
-				background: rgba(255, 255, 255, 0.1);
 			}
 		}
 		.is-active a {
@@ -142,7 +143,14 @@
 		left: em-calc(20);
 	}
 }
-	
+
+/////// END NAV BAR /////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 // ______ _____ _____ _   _______ ___________
@@ -157,11 +165,16 @@
 
 @include media(desktop) {
 	
-	#outer-wrap {
+	#outer-wrap {  // Overrides default behavior of nav slider
 		overflow: visible;
-	} // Overrides default behavior of nav slider
+	} 
 
-	// NAVIGATION
+	.row {  // To keep desktop width fixed
+		width:$row-width !important
+	}
+
+/////// START NAV BAR /////////////////////////////////////////////////////////////////////
+
 	#top {
 		display:none
 	}
@@ -218,10 +231,14 @@
 			display: inline-block;
 			a {
 				color:white; 
-				padding-left: em-calc(10)
+				padding-left: em-calc(30)
 			}
 		}
 	}
+
+/////// END NAV BAR /////////////////////////////////////////////////////////////////////
+
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -372,5 +389,3 @@
 		//	.sample-class {background:url('../img/performa-logo@2x.png'); background-size:209px auto}
 		
 	}
-
-@import "_theme"

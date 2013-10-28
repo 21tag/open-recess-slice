@@ -2,8 +2,25 @@
 
 // COLORS ////////////////////////////////////////////////////////////////////////////////////
 
+$dark-grey: #333333;
 $teal: #0584ad;
 $teal-darker: #045874;
+
+// FONTS
+
+@mixin deja-regular {
+	font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 400;
+}
+@mixin deja-medium {
+	font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+}
+@mixin deja-bold {
+	font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 700;
+}
+
 
 
 
@@ -20,8 +37,24 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
+/////// START NAV BAR /////////////////////////////////////////////////////////////////////
 
+.intro-strip {
+	background-color:$dark-grey;
+	.row {
+		background-image: url('../img/player.svg');
+		background-repeat: no-repeat;
+	}
+	.intro {
+		color:white;
+	}
+}
 
+.no-svg .intro-strip .row { // Fallback for non-SVG compliant browsers
+		background-image: url('../img/player.png');
+	}
+
+/////// END NAV BAR /////////////////////////////////////////////////////////////////////
 
 
 
@@ -42,13 +75,22 @@ $teal-darker: #045874;
 
 @include media(desktop) {
 
-	.row {
-		width:$row-width !important // To keep desktop width fixed
-	}
+/////// START NAV BAR /////////////////////////////////////////////////////////////////////
 
+	.intro-strip {
+		.row {
+			background-size: auto 92%;
+			background-position: right bottom;
+			padding:em-calc(22) 0;
+		}
+		.intro {
+			padding:0 116px 0 0;
+			font-size: em-calc(30);
+		}
+	}
 	#nav {
 		background-color:$teal;
-		border-bottom:2px solid $teal-darker;
+		border-bottom:em-calc(2) solid $teal-darker;
 		.block {
 			background-color:$teal
 		}
@@ -59,6 +101,8 @@ $teal-darker: #045874;
 			font-size:em-calc(18);
 		}
 	}
+
+/////// END NAV BAR /////////////////////////////////////////////////////////////////////
 
 }
 
@@ -80,6 +124,21 @@ $teal-darker: #045874;
 
 @include media(mobile) {
 
+	
+/////// START NAV BAR /////////////////////////////////////////////////////////////////////
+
+	.intro-strip {
+		.row {
+			background-position: 98% bottom;
+			background-size: auto 90%;
+			padding:em-calc(22) 0;
+		}
+		.intro {
+			padding: 0 23% 0 0;
+			font-size: em-calc(24);
+			text-shadow: 0 0 4px rgba(0,0,0,1);
+		}
+	}
 	#top {
 		background-color:$teal;
 		border-bottom:2px solid $teal-darker;
@@ -88,4 +147,7 @@ $teal-darker: #045874;
 	.nav-btn {
 		background: $teal url("../img/nav-icon-1.svg") left center no-repeat;
 	}
+
+/////// END NAV BAR /////////////////////////////////////////////////////////////////////
+
 }
