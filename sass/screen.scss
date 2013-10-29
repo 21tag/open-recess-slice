@@ -2,6 +2,8 @@
 
 /////// COLORS /////////////////////////////////////////////////////////////////////
 
+$light-grey:#f1f1f1;
+$medium-grey:#dadada;
 $dark-grey: #333333;
 $teal: #0584ad;
 $teal-darker: #045874;
@@ -72,7 +74,8 @@ $teal-darker: #045874;
 	.row {
 		background-image: url('../img/player.svg');
 		background-repeat: no-repeat;
-		padding:em-calc(12) 0 em-calc(16) 0;
+		padding-top:em-calc(12);
+		padding-bottom:em-calc(16);
 	}
 	h1 {
 		@include serif-regular;
@@ -142,7 +145,15 @@ $teal-darker: #045874;
  		box-shadow: none;
  		border: none;
  	}
+}
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GOOGLE MAP //////////////////////////////////////////////////////////////////////////
+
+.google-map {
+	height:500px;
+	background:url('../img/sample-google-map.png') no-repeat 50% 25%;
+	margin-bottom:em-calc(20);
 }
 
 
@@ -190,6 +201,47 @@ $teal-darker: #045874;
 	}
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// START NAV BAR ///////////////////////////////////////////////////////////////////////
+
+	.sub-filter-bar {
+		padding:em-calc(15) 10px; 
+		margin:0 auto em-calc(20) auto;
+		border:1px solid $medium-grey;
+		background-color:$light-grey;
+		.option {
+			float:left;
+			font-size:em-calc(14);
+			margin-right:em-calc(15);
+		}
+		.filter-by {
+			@include sans-serif-bold;
+			text-transform: uppercase;
+		}
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GAME TILES ///////////////////////////////////////////////////////////////////////
+
+	.game-tiles {
+		margin: 0 auto em-calc(20) auto;
+		.item {
+			width:292px;
+			position:relative;
+			margin-bottom:em-calc(20);
+			.caption {
+				position:absolute;
+				bottom:0;
+				background-color:white;
+				opacity:.9;
+				width:100%;
+				padding:em-calc(10);
+				img {
+					width:100%
+				}
+			}
+		}
+	}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
