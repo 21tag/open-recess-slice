@@ -150,7 +150,7 @@ $body-font-color: #333333;
 //
 
 $row-width: em-calc(936);
-$column-gutter: em-calc(20);
+$column-gutter: em-calc(10);
 // $total-columns: 12;
 
 //
@@ -174,9 +174,9 @@ $column-gutter: em-calc(20);
 
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: normal;
-// $header-font-style: normal;
+$header-font-style: normal;
 $header-font-color: #333;
-// $header-line-height: 1.4;
+$header-line-height: 1.4;
 $header-top-margin: 0;
 $header-bottom-margin: 0;
 // $header-text-rendering: optimizeLegibility;
