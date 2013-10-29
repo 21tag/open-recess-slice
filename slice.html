@@ -88,10 +88,13 @@
           </div>
         </div>
 
-        <div class="homepage top-filter-bar hide-for-small">
+        <div class="homepage top-filter-bar">
           <div class="row">
             <form>
-              <div class="small-5 columns">
+              <div class="small-4 columns show-for-small show-me">
+                Show me:
+              </div>
+              <div class="small-8 large-5 columns game-type-container">
                 <select class="game-type chosen-select">
                   <option value="all-games">All Games</option>
                   <option value="baseball">Baseball</option>
@@ -99,13 +102,16 @@
                   <option value="football">Football</option>
                 </select>
               </div>
-              <div class="small-1 columns in">
+              <div class="large-1 columns in hide-for-small">
                 in
               </div>
-              <div class="small-5 columns location">
+              <div class="small-4 columns located-in show-for-small">
+                Located in:
+              </div>
+              <div class="small-6 large-5 columns location">
                 <input type="text" />
               </div>
-              <div class="small-1 columns search">
+              <div class="small-2 large-1 columns search">
                 <input type="submit" value="M" />
               </div>
             </form>

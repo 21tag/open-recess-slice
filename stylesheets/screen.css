@@ -527,8 +527,8 @@ select {
   /* line 126, ../sass/foundation/components/_grid.scss */
   .row .row {
     width: auto;
-    margin-left: -0.3125em;
-    margin-right: -0.3125em;
+    margin-left: -0.40625em;
+    margin-right: -0.40625em;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none;
@@ -558,8 +558,8 @@ select {
 .column,
 .columns {
   position: relative;
-  padding-left: 0.3125em;
-  padding-right: 0.3125em;
+  padding-left: 0.40625em;
+  padding-right: 0.40625em;
   width: 100%;
   float: left; }
 
@@ -568,8 +568,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.3125em;
-    padding-right: 0.3125em;
+    padding-left: 0.40625em;
+    padding-right: 0.40625em;
     float: left; }
 
   /* line 140, ../sass/foundation/components/_grid.scss */
@@ -5906,10 +5906,13 @@ a.th {
     .top-filter-bar .chosen-container .no-results {
       line-height: 1.4; }
   /* line 130, ../sass/screen.scss */
-  .top-filter-bar .in {
+  .top-filter-bar .in, .top-filter-bar .located-in, .top-filter-bar .show-me {
     margin-top: 0.6875em;
-    text-align: center; }
+    text-align: right; }
   /* line 134, ../sass/screen.scss */
+  .top-filter-bar .in {
+    text-align: center; }
+  /* line 137, ../sass/screen.scss */
   .top-filter-bar .search input {
     font-family: "heydings_iconsregular";
     width: 100%;
@@ -5919,52 +5922,56 @@ a.th {
     border: none; }
 
 @media only screen and (min-width: 768px) {
-  /* line 166, ../sass/screen.scss */
+  /* line 169, ../sass/screen.scss */
   .intro-strip .row {
     background-size: auto 92%;
     background-position: right bottom; }
-  /* line 170, ../sass/screen.scss */
+  /* line 173, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 116px 0 0;
     font-size: 1.875em; }
 
-  /* line 175, ../sass/screen.scss */
+  /* line 178, ../sass/screen.scss */
   #nav {
     background-color: #0584ad;
     border-bottom: 0.125em solid #045874; }
-    /* line 178, ../sass/screen.scss */
+    /* line 181, ../sass/screen.scss */
     #nav .block {
       background-color: #0584ad; }
-    /* line 181, ../sass/screen.scss */
+    /* line 184, ../sass/screen.scss */
     #nav h1 {
       font-size: 2.1875em; }
-    /* line 184, ../sass/screen.scss */
+    /* line 187, ../sass/screen.scss */
     #nav ul {
       font-size: 1.125em; } }
 @media only screen and (max-width: 768px) {
-  /* line 212, ../sass/screen.scss */
+  /* line 215, ../sass/screen.scss */
   #top {
     background-color: #0584ad;
     border-bottom: 2px solid #045874; }
-    /* line 215, ../sass/screen.scss */
+    /* line 218, ../sass/screen.scss */
     #top h1 {
       font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
       font-weight: 700;
       font-size: 1em; }
-    /* line 219, ../sass/screen.scss */
+    /* line 222, ../sass/screen.scss */
     #top .block-title {
       font-size: 2.1875em; }
-    /* line 222, ../sass/screen.scss */
+    /* line 225, ../sass/screen.scss */
     #top .nav-btn {
       top: 1.7em;
       background: #0584ad url("../img/nav-icon-1.svg") left center no-repeat; }
 
-  /* line 233, ../sass/screen.scss */
+  /* line 236, ../sass/screen.scss */
   .intro-strip .row {
     background-position: 98% bottom;
     background-size: auto 90%; }
-  /* line 237, ../sass/screen.scss */
+  /* line 240, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 23% 0 0;
     font-size: 1.875em;
-    text-shadow: 0 0 4px black; } }
+    text-shadow: 0 0 4px black; }
+
+  /* line 250, ../sass/screen.scss */
+  .game-type-container {
+    margin-bottom: .82em; } }

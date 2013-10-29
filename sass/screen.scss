@@ -127,8 +127,11 @@ $teal-darker: #045874;
  			line-height:1.4;
  		}
  	}
- 	.in {
+ 	.in, .located-in, .show-me {
  		margin-top:em-calc(11);
+ 		text-align: right;
+ 	}
+ 	.in {
  		text-align: center;
  	}
  	.search input {
@@ -242,6 +245,10 @@ $teal-darker: #045874;
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-/////// NEXT SECTION /////////////////////////////////////////////////////////////////////
+/////// TOP FILTER BAR //////////////////////////////////////////////////////////////////////
+
+	.game-type-container {
+		margin-bottom:.82em;
+	}
 
 }
