@@ -1,5 +1,12 @@
 @import "_normalize2.1.2", "foundation", "_tools", "_layout";
 
+/////// FOUNDATION OVERRIDES /////////////////////////////////////////////////////////////////////
+
+ul, ol, dl {
+	margin:0;
+	list-style:none;
+}
+
 /////// COLORS /////////////////////////////////////////////////////////////////////
 
 $light-grey:#f1f1f1;
@@ -56,24 +63,33 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-button {
+.button {
 	@include sans-serif-bold;
 	color:white;
 	border-radius: 10px;
 	border:none;
 	padding:.7em 1em;
+	display:inline-block;
+	line-height:1;
+	a {
+		color:white;
+	}
 	&:hover {
 		a {
 			color:white;
 		}
 	}
+	&.teal {
+		background-color:$teal;
+		&:hover {background-color:#0697c7}
+	}
 	&.grey {
 		background-color:$dark-grey;
 		&:hover {background-color:#878787}
 	}
-	a {
+	&.medium {
+		font-size:em-calc(18);
 		color:white;
-		text-decoration:none;
 	}
 	&.large {
 		font-size:em-calc(24);
