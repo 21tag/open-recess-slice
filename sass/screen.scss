@@ -27,9 +27,11 @@ ul, ol, dl {
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// COLORS /////////////////////////////////////////////////////////////////////////////
 
-$light-grey:#f1f1f1;
-$medium-grey:#dadada;
+$lightest-grey:#dadada;
+$light-grey:#bfbfbf;
+$medium-grey:#808080;
 $dark-grey: #333333;
+$teal-lighter: #0697c7;
 $teal: #0584ad;
 $teal-darker: #045874;
 
@@ -72,7 +74,6 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// BUTTONS ////////////////////////////////////////////////////////////////////////////
 
-
 .button {
 	@include sans-serif-medium;
 	color:white;
@@ -92,11 +93,11 @@ $teal-darker: #045874;
 	}
 	&.teal {
 		background-color:$teal;
-		&:hover {background-color:#0697c7}
+		&:hover {background-color:$teal-lighter}
 	}
 	&.grey {
 		background-color:$dark-grey;
-		&:hover {background-color:#878787}
+		&:hover {background-color:$medium-grey}
 	}
 	&.medium {
 		font-size:em-calc(18);
@@ -186,6 +187,12 @@ $teal-darker: #045874;
  		margin-top:em-calc(11);
  		text-align: right;
  	}
+ 	.location {
+ 		input {
+ 			padding-bottom:em-calc(5, 24);
+ 			padding-left:em-calc(15, 24);
+ 		}
+ 	}
  	.in {
  		text-align: center;
  	}
@@ -196,6 +203,10 @@ $teal-darker: #045874;
  		color:white;
  		box-shadow: none;
  		border: none;
+ 		&:hover {
+ 			background-color:$teal-lighter;
+ 			@include single-transition;
+ 		}
  	}
 }
 
@@ -244,12 +255,17 @@ $teal-darker: #045874;
 			background-color:$teal;
 		}
 		h1 {
-			font-size:em-calc(35)
+			font-size:em-calc(35);
+			position:relative;
+			bottom:em-calc(-6, 35);
 		}
 		ul {
 			font-size:em-calc(18);
 			li {
 				padding-bottom:em-calc(3, 18);
+				height:em-calc(35, 18);
+				position:relative;
+				bottom:em-calc(-10, 18);
 				&.selected, &:hover {
 				background: url('../img/nav-triangle-small.png') no-repeat 64% bottom;
 				}
@@ -258,13 +274,13 @@ $teal-darker: #045874;
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-/////// START NAV BAR ///////////////////////////////////////////////////////////////////////
+/////// START SUB-NAV BAR ///////////////////////////////////////////////////////////////////////
 
 	.sub-filter-bar {
 		padding:em-calc(15) 10px; 
 		margin:0 auto em-calc(20) auto;
-		border:1px solid $medium-grey;
-		background-color:$light-grey;
+		border:1px solid $light-grey;
+		background-color:$lightest-grey;
 		.option {
 			float:left;
 			font-size:em-calc(14);
@@ -298,6 +314,45 @@ $teal-darker: #045874;
 			}
 		}
 	}
+
+	// Jquery UI Date picker custom styles
+	#ui-datepicker-div {
+		@include sans-serif-regular;
+		.ui-datepicker-calendar {
+			border:none;
+		}
+		.ui-datepicker-header {
+			background:$lightest-grey;
+			border:none;
+		}
+		a {
+			&.ui-state-default {
+			background:$lightest-grey;
+				&:hover {
+					border:1px solid $teal;
+					background:$teal;
+					color:white;
+				}
+			}
+			&.ui-state-highlight, &.ui-state-active {
+				border:1px solid $teal;
+				background:$teal;
+				color:white
+			}
+			&.ui-state-hover {
+				background:none;
+				border:none;
+				top:2px;
+			}
+			&.ui-datepicker-prev-hover {
+				left:2px;
+			}
+			&.ui-datepicker-next-hover {
+				right:2px;
+			}
+		}
+	}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// GAME TILES ///////////////////////////////////////////////////////////////////////
@@ -357,24 +412,36 @@ $teal-darker: #045874;
 
 	.game-detail {
 		img {
-			border:1px solid $medium-grey;
+			border:1px solid $lightest-grey;
 			float:right;
+			margin:0 0 20px 20px;
+			width:33.3333%;
 		}
 		.primary-info {
 			h2 {
 				@include sans-serif-medium;
 				font-size: em-calc(14);
 				text-transform: uppercase;
+				margin-bottom:em-calc(2, 14)
 			}
 			h1 {
 				@include sans-serif-bold;
 				font-size:em-calc(36);
+				margin-bottom:em-calc(3, 36)
 			}
 			time {
 				@include sans-serif-medium;
-				font-size: em-calc(36);
+				font-size: em-calc(24);
 				display:block;
-				margin-bottom: em-calc(20, 36);
+				margin-bottom: em-calc(20, 24);
+			}
+			.description {
+				@include serif-regular;
+				font-size:em-calc(24);
+				margin-top: em-calc(20, 24);
+				p {
+					margin-bottom: em-calc(20, 24);
+				}
 			}
 		}
 	}
@@ -457,7 +524,7 @@ $teal-darker: #045874;
 			width:100%;
 			position:relative;
 			margin-bottom:em-calc(20);
-			border-bottom:1px solid $medium-grey;
+			border-bottom:1px solid $lightest-grey;
 			padding-bottom:em-calc(20);
 			padding-left:15px;
 			padding-right:15px;
@@ -487,7 +554,7 @@ $teal-darker: #045874;
 
 	.mobile-sub-filter {
 		margin:em-calc(-20) 0 em-calc(20) 0;
-		background-color:$light-grey;
+		background-color:$lightest-grey;
 		padding: em-calc(20) 0 em-calc(20) 10px;
 	}
 
