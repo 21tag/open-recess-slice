@@ -56,6 +56,30 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
+button {
+	@include sans-serif-bold;
+	color:white;
+	border-radius: 10px;
+	border:none;
+	padding:.7em 1em;
+	&:hover {
+		a {
+			color:white;
+		}
+	}
+	&.grey {
+		background-color:$dark-grey;
+		&:hover {background-color:#878787}
+	}
+	a {
+		color:white;
+		text-decoration:none;
+	}
+	&.large {
+		font-size:em-calc(24);
+		color:white;
+	}
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// NAV BAR /////////////////////////////////////////////////////////////////////
@@ -199,7 +223,6 @@ $teal-darker: #045874;
 			font-size:em-calc(18);
 		}
 	}
-}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// START NAV BAR ///////////////////////////////////////////////////////////////////////
@@ -223,12 +246,19 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// GAME TILES ///////////////////////////////////////////////////////////////////////
 
+
 	.game-tiles {
-		margin: 0 auto em-calc(20) auto;
+		margin: 0 0 em-calc(20) em-calc(-20);
 		.item {
 			width:292px;
 			position:relative;
 			margin-bottom:em-calc(20);
+			margin-left:em-calc(20);
+			display: inline-block;
+			vertical-align:top;
+			a, a:hover, a:focus {
+				color:$dark-grey;
+			}
 			.caption {
 				position:absolute;
 				bottom:0;
@@ -236,12 +266,23 @@ $teal-darker: #045874;
 				opacity:.9;
 				width:100%;
 				padding:em-calc(10);
-				img {
-					width:100%
+				h2 {
+					@include sans-serif-bold;
+					font-size:em-calc(12);
+					text-transform:uppercase;
+				}
+				h1 {
+					@include sans-serif-bold;
+					font-size:em-calc(24);
+				}
+				time {
+					@include sans-serif-medium;
+					font-size:em-calc(18);
 				}
 			}
 		}
 	}
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -302,5 +343,50 @@ $teal-darker: #045874;
 	.game-type-container {
 		margin-bottom:.82em;
 	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GAME TILES //////////////////////////////////////////////////////////////////////
+
+	.game-tiles {
+		margin: 0 0 em-calc(20) 0;
+		.item {
+			@include clearfix;
+			width:100%;
+			position:relative;
+			margin-bottom:em-calc(20);
+			border-bottom:1px solid $medium-grey;
+			padding-bottom:em-calc(20);
+			padding-left:15px;
+			padding-right:15px;
+			a, a:hover, a:focus {
+				color:$dark-grey;
+			}
+			.caption {
+				h1 {
+					@include sans-serif-bold;
+					font-size:em-calc(36);
+				}
+				time {
+					@include sans-serif-medium;
+					font-size:em-calc(24);
+				}
+			}
+			img {
+				float:right;
+				width:25%;
+				margin-left:20px;
+			}
+		}
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GAME TILES //////////////////////////////////////////////////////////////////////
+
+	.mobile-sub-filter {
+		margin:em-calc(-20) 0 em-calc(20) 0;
+		background-color:$light-grey;
+		padding: em-calc(20) 0 em-calc(20) 10px;
+	}
+
 
 }
