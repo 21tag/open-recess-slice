@@ -126,7 +126,8 @@ button {
  		input {
  			width:100%;
  			height: em-calc(37);
- 			padding-left:em-calc(8);
+ 			padding-left:.3em;
+ 			padding-top:.3em;
  			color:$dark-grey;
  			@include sans-serif-bold;
  			border: 1px solid #aaa;
@@ -212,7 +213,6 @@ button {
 	}
 	#nav {
 		background-color:$teal;
-		border-bottom:em-calc(2) solid $teal-darker;
 		.block {
 			background-color:$teal;
 		}
@@ -221,6 +221,12 @@ button {
 		}
 		ul {
 			font-size:em-calc(18);
+			li {
+				padding-bottom:em-calc(3);
+				&.selected, &:hover {
+				background: url('../img/nav-triangle-small.png') no-repeat 64% bottom;
+				}
+			}
 		}
 	}
 
@@ -236,10 +242,24 @@ button {
 			float:left;
 			font-size:em-calc(14);
 			margin-right:em-calc(15);
-		}
-		.filter-by {
-			@include sans-serif-bold;
-			text-transform: uppercase;
+			&.filter-by, &.players-needed {
+				position:relative;
+				top:em-calc(5);
+			}
+			&.filter-by {
+				@include sans-serif-bold;
+				text-transform: uppercase;
+			}
+			&.players-needed {
+				input {
+					position:relative;
+					top:em-calc(-1);
+				}
+				span {
+					@include sans-serif-medium;
+					margin-left:em-calc(5);
+				}
+			}
 		}
 	}
 
@@ -278,6 +298,19 @@ button {
 				time {
 					@include sans-serif-medium;
 					font-size:em-calc(18);
+				}
+			}
+			&:hover {
+				img {
+					opacity: .7;
+				}
+				.caption {
+					opacity:1;
+					background-color:$teal;
+					color:white;
+					h1, h2 {
+						color:white;
+					}
 				}
 			}
 		}

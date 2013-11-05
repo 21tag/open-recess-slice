@@ -5119,46 +5119,45 @@ a.th {
     #nav li a {
       display: block;
       color: white;
-      line-height: 1.28571em;
       outline: none; }
-      /* line 121, ../sass/_layout.scss */
+      /* line 120, ../sass/_layout.scss */
       #nav li a:focus, #nav li a:hover {
         color: #fff; }
-    /* line 125, ../sass/_layout.scss */
+    /* line 124, ../sass/_layout.scss */
     #nav li .is-active a {
       color: #fff; }
 
-/* line 131, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 #top {
   z-index: 100;
   position: relative;
   color: #fff; }
-  /* line 135, ../sass/_layout.scss */
+  /* line 134, ../sass/_layout.scss */
   #top .block-title {
     margin: 0;
     line-height: 1.2em;
     text-align: center;
     white-space: nowrap; }
-  /* line 141, ../sass/_layout.scss */
+  /* line 140, ../sass/_layout.scss */
   #top .nav-btn {
     position: absolute;
     top: 1em;
     left: 1.25em; }
 
 @media only screen and (min-width: 768px) {
-  /* line 169, ../sass/_layout.scss */
+  /* line 168, ../sass/_layout.scss */
   #outer-wrap {
     overflow: visible; }
 
-  /* line 173, ../sass/_layout.scss */
+  /* line 172, ../sass/_layout.scss */
   .row {
     width: 58.5em !important; }
 
-  /* line 179, ../sass/_layout.scss */
+  /* line 178, ../sass/_layout.scss */
   #top {
     display: none; }
 
-  /* line 182, ../sass/_layout.scss */
+  /* line 181, ../sass/_layout.scss */
   #top .nav-btn {
     border: 0;
     clip: rect(0 0 0 0);
@@ -5169,7 +5168,7 @@ a.th {
     position: absolute;
     width: 1px; }
 
-  /* line 194, ../sass/_layout.scss */
+  /* line 193, ../sass/_layout.scss */
   #nav .close-btn {
     border: 0;
     clip: rect(0 0 0 0);
@@ -5179,7 +5178,7 @@ a.th {
     padding: 0;
     position: absolute;
     width: 1px; }
-  /* line 204, ../sass/_layout.scss */
+  /* line 203, ../sass/_layout.scss */
   #nav .block {
     padding: 0;
     *zoom: 1; }
@@ -5190,7 +5189,7 @@ a.th {
     /* line 122, ../sass/foundation/components/_global.scss */
     #nav .block:after {
       clear: both; }
-  /* line 207, ../sass/_layout.scss */
+  /* line 206, ../sass/_layout.scss */
   #nav .block-title {
     border: 0;
     clip: rect(0 0 0 0);
@@ -5200,64 +5199,64 @@ a.th {
     padding: 0;
     position: absolute;
     width: 1px; }
-  /* line 217, ../sass/_layout.scss */
+  /* line 216, ../sass/_layout.scss */
   #nav h1 {
     color: white;
     float: left;
     margin: 0; }
-    /* line 221, ../sass/_layout.scss */
+    /* line 220, ../sass/_layout.scss */
     #nav h1 a {
       color: white; }
-  /* line 225, ../sass/_layout.scss */
+  /* line 224, ../sass/_layout.scss */
   #nav ul {
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 0; }
-  /* line 231, ../sass/_layout.scss */
+  /* line 230, ../sass/_layout.scss */
   #nav li {
     display: inline-block; }
-    /* line 233, ../sass/_layout.scss */
+    /* line 232, ../sass/_layout.scss */
     #nav li a {
       color: white;
       padding-left: 1.875em; } }
 @media only screen and (max-width: 768px) {
-  /* line 261, ../sass/_layout.scss */
+  /* line 260, ../sass/_layout.scss */
   #top .block-title {
     color: white; }
 
-  /* line 266, ../sass/_layout.scss */
+  /* line 265, ../sass/_layout.scss */
   #nav {
     position: absolute;
     top: 0; }
-    /* line 269, ../sass/_layout.scss */
+    /* line 268, ../sass/_layout.scss */
     #nav h1 {
       display: none; }
-    /* line 272, ../sass/_layout.scss */
+    /* line 271, ../sass/_layout.scss */
     #nav:not(:target) {
       z-index: 1;
       height: 0; }
-    /* line 276, ../sass/_layout.scss */
+    /* line 275, ../sass/_layout.scss */
     #nav:target .close-btn {
       display: block; }
-    /* line 279, ../sass/_layout.scss */
+    /* line 278, ../sass/_layout.scss */
     #nav .close-btn {
       display: none;
       position: absolute;
       top: -3.75em;
       left: 1.875em; }
-    /* line 285, ../sass/_layout.scss */
+    /* line 284, ../sass/_layout.scss */
     #nav .block {
       position: relative;
       padding: 0; }
-    /* line 289, ../sass/_layout.scss */
+    /* line 288, ../sass/_layout.scss */
     #nav li {
       position: relative;
       border-top: 1px solid rgba(255, 255, 255, 0.1); }
-      /* line 292, ../sass/_layout.scss */
+      /* line 291, ../sass/_layout.scss */
       #nav li:last-child {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-      /* line 295, ../sass/_layout.scss */
+      /* line 294, ../sass/_layout.scss */
       #nav li.is-active:after {
         z-index: 50;
         display: block;
@@ -5269,11 +5268,11 @@ a.th {
         border-top: 0.625em transparent solid;
         border-bottom: 0.625em transparent solid;
         border-right: 0.625em white solid; }
-      /* line 307, ../sass/_layout.scss */
+      /* line 306, ../sass/_layout.scss */
       #nav li a {
         padding: 0.85714em 2.14286em; }
 
-  /* line 314, ../sass/_layout.scss */
+  /* line 313, ../sass/_layout.scss */
   .js-ready #nav {
     height: 100%;
     width: 70%;
@@ -5282,27 +5281,27 @@ a.th {
     -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
     -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
     box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25); }
-    /* line 322, ../sass/_layout.scss */
+    /* line 321, ../sass/_layout.scss */
     .js-ready #nav .block {
       background: transparent; }
-    /* line 325, ../sass/_layout.scss */
+    /* line 324, ../sass/_layout.scss */
     .js-ready #nav .close-btn {
       display: block;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
       opacity: 0.7; }
-      /* line 329, ../sass/_layout.scss */
+      /* line 328, ../sass/_layout.scss */
       .js-ready #nav .close-btn:focus, .js-ready #nav .close-btn .js-ready #nav .close-btn:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1; }
-  /* line 335, ../sass/_layout.scss */
+  /* line 334, ../sass/_layout.scss */
   .js-ready #inner-wrap {
     left: 0; }
 
-  /* line 341, ../sass/_layout.scss */
+  /* line 340, ../sass/_layout.scss */
   .js-nav #inner-wrap {
     left: 70%; }
 
-  /* line 346, ../sass/_layout.scss */
+  /* line 345, ../sass/_layout.scss */
   .csstransforms3d.csstransitions.js-ready #nav {
     left: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -5316,7 +5315,7 @@ a.th {
     -o-backface-visibility: hidden;
     backface-visibility: hidden; }
 
-  /* line 359, ../sass/_layout.scss */
+  /* line 358, ../sass/_layout.scss */
   .csstransforms3d.csstransitions.js-ready #inner-wrap {
     left: 0 !important;
     -webkit-transform: translate3d(0, 0, 0);
@@ -5334,7 +5333,7 @@ a.th {
     -o-backface-visibility: hidden;
     backface-visibility: hidden; }
 
-  /* line 376, ../sass/_layout.scss */
+  /* line 375, ../sass/_layout.scss */
   .csstransforms3d.csstransitions.js-nav #inner-wrap {
     -webkit-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
     -moz-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
@@ -5413,41 +5412,42 @@ button {
     .top-filter-bar form input {
       width: 100%;
       height: 2.3125em;
-      padding-left: 0.5em;
+      padding-left: .3em;
+      padding-top: .3em;
       color: #333333;
       font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
       font-weight: 700;
       border: 1px solid #aaa;
       border-radius: 5px;
       background-color: #fff; }
-  /* line 137, ../sass/screen.scss */
+  /* line 138, ../sass/screen.scss */
   .top-filter-bar .chosen-container {
     width: 100% !important; }
-    /* line 139, ../sass/screen.scss */
+    /* line 140, ../sass/screen.scss */
     .top-filter-bar .chosen-container .chosen-results li {
       padding: 0.625em; }
-    /* line 142, ../sass/screen.scss */
+    /* line 143, ../sass/screen.scss */
     .top-filter-bar .chosen-container a.chosen-single {
       height: 2.3125em; }
-      /* line 144, ../sass/screen.scss */
+      /* line 145, ../sass/screen.scss */
       .top-filter-bar .chosen-container a.chosen-single span {
         color: #333333;
         margin-top: 0.65625em;
         margin-left: 0.1875em; }
-    /* line 150, ../sass/screen.scss */
+    /* line 151, ../sass/screen.scss */
     .top-filter-bar .chosen-container .chosen-single div b {
       margin-top: 17px; }
-    /* line 153, ../sass/screen.scss */
+    /* line 154, ../sass/screen.scss */
     .top-filter-bar .chosen-container .no-results {
       line-height: 1.4; }
-  /* line 157, ../sass/screen.scss */
+  /* line 158, ../sass/screen.scss */
   .top-filter-bar .in, .top-filter-bar .located-in, .top-filter-bar .show-me {
     margin-top: 0.6875em;
     text-align: right; }
-  /* line 161, ../sass/screen.scss */
+  /* line 162, ../sass/screen.scss */
   .top-filter-bar .in {
     text-align: center; }
-  /* line 164, ../sass/screen.scss */
+  /* line 165, ../sass/screen.scss */
   .top-filter-bar .search input {
     font-family: "heydings_iconsregular";
     width: 100%;
@@ -5456,26 +5456,25 @@ button {
     box-shadow: none;
     border: none; }
 
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .google-map {
   height: 500px;
   background: url("../img/sample-google-map.png") no-repeat 50% 25%;
   margin-bottom: 1.25em; }
 
 @media only screen and (min-width: 768px) {
-  /* line 204, ../sass/screen.scss */
+  /* line 205, ../sass/screen.scss */
   .intro-strip .row {
     background-size: auto 92%;
     background-position: right bottom; }
-  /* line 208, ../sass/screen.scss */
+  /* line 209, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 116px 0 0;
     font-size: 1.875em; }
 
-  /* line 213, ../sass/screen.scss */
+  /* line 214, ../sass/screen.scss */
   #nav {
-    background-color: #0584ad;
-    border-bottom: 0.125em solid #045874; }
+    background-color: #0584ad; }
     /* line 216, ../sass/screen.scss */
     #nav .block {
       background-color: #0584ad; }
@@ -5485,28 +5484,47 @@ button {
     /* line 222, ../sass/screen.scss */
     #nav ul {
       font-size: 1.125em; }
+      /* line 224, ../sass/screen.scss */
+      #nav ul li {
+        padding-bottom: 0.1875em; }
+        /* line 226, ../sass/screen.scss */
+        #nav ul li.selected, #nav ul li:hover {
+          background: url("../img/nav-triangle-small.png") no-repeat 64% bottom; }
 
-  /* line 230, ../sass/screen.scss */
+  /* line 236, ../sass/screen.scss */
   .sub-filter-bar {
     padding: 0.9375em 10px;
     margin: 0 auto 1.25em auto;
     border: 1px solid #dadada;
     background-color: #f1f1f1; }
-    /* line 235, ../sass/screen.scss */
+    /* line 241, ../sass/screen.scss */
     .sub-filter-bar .option {
       float: left;
       font-size: 0.875em;
       margin-right: 0.9375em; }
-    /* line 240, ../sass/screen.scss */
-    .sub-filter-bar .filter-by {
-      font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-      font-weight: 700;
-      text-transform: uppercase; }
+      /* line 245, ../sass/screen.scss */
+      .sub-filter-bar .option.filter-by, .sub-filter-bar .option.players-needed {
+        position: relative;
+        top: 0.3125em; }
+      /* line 249, ../sass/screen.scss */
+      .sub-filter-bar .option.filter-by {
+        font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase; }
+      /* line 254, ../sass/screen.scss */
+      .sub-filter-bar .option.players-needed input {
+        position: relative;
+        top: -0.0625em; }
+      /* line 258, ../sass/screen.scss */
+      .sub-filter-bar .option.players-needed span {
+        font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+        font-weight: 500;
+        margin-left: 0.3125em; }
 
-  /* line 250, ../sass/screen.scss */
+  /* line 270, ../sass/screen.scss */
   .game-tiles {
     margin: 0 0 1.25em -1.25em; }
-    /* line 252, ../sass/screen.scss */
+    /* line 272, ../sass/screen.scss */
     .game-tiles .item {
       width: 292px;
       position: relative;
@@ -5514,10 +5532,10 @@ button {
       margin-left: 1.25em;
       display: inline-block;
       vertical-align: top; }
-      /* line 259, ../sass/screen.scss */
+      /* line 279, ../sass/screen.scss */
       .game-tiles .item a, .game-tiles .item a:hover, .game-tiles .item a:focus {
         color: #333333; }
-      /* line 262, ../sass/screen.scss */
+      /* line 282, ../sass/screen.scss */
       .game-tiles .item .caption {
         position: absolute;
         bottom: 0;
@@ -5525,58 +5543,69 @@ button {
         opacity: .9;
         width: 100%;
         padding: 0.625em; }
-        /* line 269, ../sass/screen.scss */
+        /* line 289, ../sass/screen.scss */
         .game-tiles .item .caption h2 {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 700;
           font-size: 0.75em;
           text-transform: uppercase; }
-        /* line 274, ../sass/screen.scss */
+        /* line 294, ../sass/screen.scss */
         .game-tiles .item .caption h1 {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 700;
           font-size: 1.5em; }
-        /* line 278, ../sass/screen.scss */
+        /* line 298, ../sass/screen.scss */
         .game-tiles .item .caption time {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 500;
-          font-size: 1.125em; } }
+          font-size: 1.125em; }
+      /* line 304, ../sass/screen.scss */
+      .game-tiles .item:hover img {
+        opacity: .7; }
+      /* line 307, ../sass/screen.scss */
+      .game-tiles .item:hover .caption {
+        opacity: 1;
+        background-color: #0584ad;
+        color: white; }
+        /* line 311, ../sass/screen.scss */
+        .game-tiles .item:hover .caption h1, .game-tiles .item:hover .caption h2 {
+          color: white; } }
 @media only screen and (max-width: 768px) {
-  /* line 308, ../sass/screen.scss */
+  /* line 341, ../sass/screen.scss */
   #top {
     background-color: #0584ad;
     border-bottom: 2px solid #045874; }
-    /* line 311, ../sass/screen.scss */
+    /* line 344, ../sass/screen.scss */
     #top h1 {
       font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
       font-weight: 700;
       font-size: 1em; }
-    /* line 315, ../sass/screen.scss */
+    /* line 348, ../sass/screen.scss */
     #top .block-title {
       font-size: 2.1875em; }
-    /* line 318, ../sass/screen.scss */
+    /* line 351, ../sass/screen.scss */
     #top .nav-btn {
       top: 1.7em;
       background: #0584ad url("../img/nav-icon-1.svg") left center no-repeat; }
 
-  /* line 329, ../sass/screen.scss */
+  /* line 362, ../sass/screen.scss */
   .intro-strip .row {
     background-position: 98% bottom;
     background-size: auto 90%; }
-  /* line 333, ../sass/screen.scss */
+  /* line 366, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 23% 0 0;
     font-size: 1.875em;
     text-shadow: 0 0 4px black; }
 
-  /* line 343, ../sass/screen.scss */
+  /* line 376, ../sass/screen.scss */
   .game-type-container {
     margin-bottom: .82em; }
 
-  /* line 350, ../sass/screen.scss */
+  /* line 383, ../sass/screen.scss */
   .game-tiles {
     margin: 0 0 1.25em 0; }
-    /* line 352, ../sass/screen.scss */
+    /* line 385, ../sass/screen.scss */
     .game-tiles .item {
       *zoom: 1;
       width: 100%;
@@ -5593,26 +5622,26 @@ button {
       /* line 122, ../sass/foundation/components/_global.scss */
       .game-tiles .item:after {
         clear: both; }
-      /* line 361, ../sass/screen.scss */
+      /* line 394, ../sass/screen.scss */
       .game-tiles .item a, .game-tiles .item a:hover, .game-tiles .item a:focus {
         color: #333333; }
-      /* line 365, ../sass/screen.scss */
+      /* line 398, ../sass/screen.scss */
       .game-tiles .item .caption h1 {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 700;
         font-size: 2.25em; }
-      /* line 369, ../sass/screen.scss */
+      /* line 402, ../sass/screen.scss */
       .game-tiles .item .caption time {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 500;
         font-size: 1.5em; }
-      /* line 374, ../sass/screen.scss */
+      /* line 407, ../sass/screen.scss */
       .game-tiles .item img {
         float: right;
         width: 25%;
         margin-left: 20px; }
 
-  /* line 385, ../sass/screen.scss */
+  /* line 418, ../sass/screen.scss */
   .mobile-sub-filter {
     margin: -1.25em 0 1.25em 0;
     background-color: #f1f1f1;

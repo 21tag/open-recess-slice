@@ -19,6 +19,7 @@
 	<link rel="canonical" href="XXX" /> <!-- Same as meta property og:url -->
 	<link rel="stylesheet" href="js/vendor/chosen-1.0.0/chosen.css">
   <link rel="stylesheet" href="stylesheets/screen.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	
   <!-- This script MUST be in the head -->
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -57,7 +58,7 @@
             <div class="block">
               <h1><a href="#">OpenRecess</a></h1>
               <ul>
-                <li>
+                <li class="selected">
                   <a href="#">Find Games</a>
                 </li>
                 <li>
@@ -123,13 +124,13 @@
 
         <div class="row hide-for-small sub-filter-bar">
           <div class="small-12 columns">
-            <div class="option">
-              <span class="filter-by">Filter games by:</span>
+            <div class="option filter-by">
+              <span>Filter games by:</span>
             </div>
             <div class="option">
-              <input type="text" />
+              <input type="text" id="datepicker" />
             </div>
-            <div class="option">
+            <div class="option players-needed">
               <input type="checkbox" /> <span>Players Needed<span>
             </div>
           </div>
@@ -224,6 +225,7 @@
   <script src="js/vendor/off-canvas.js"></script>
   <script src="js/vendor/chosen-1.0.0/chosen.jquery.min.js"></script>
   <script src="js/main-ck.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   
 	<!-- Google Analytics -->
 	<script>
