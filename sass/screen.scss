@@ -247,6 +247,7 @@ $teal-darker: #045874;
 		h1 {
 			padding:0 116px 0 0;
 			font-size: em-calc(30);
+			line-height:1.4;
 		}
 	}
 	#nav {
@@ -382,10 +383,12 @@ $teal-darker: #045874;
 					@include sans-serif-bold;
 					font-size:em-calc(12);
 					text-transform:uppercase;
+					margin-bottom:em-calc(5,12)
 				}
 				h1 {
 					@include sans-serif-bold;
 					font-size:em-calc(24);
+					margin-bottom:em-calc(5,24)
 				}
 				time {
 					@include sans-serif-medium;
@@ -394,6 +397,7 @@ $teal-darker: #045874;
 			}
 			&:hover {
 				img {
+					@include single-transition;
 					opacity: .7;
 				}
 				.caption {
@@ -423,12 +427,12 @@ $teal-darker: #045874;
 				@include sans-serif-medium;
 				font-size: em-calc(14);
 				text-transform: uppercase;
-				margin-bottom:em-calc(2, 14)
+				margin-bottom:em-calc(10, 14);
 			}
 			h1 {
 				@include sans-serif-bold;
 				font-size:em-calc(36);
-				margin-bottom:em-calc(3, 36)
+				margin-bottom:em-calc(10, 36);
 			}
 			time {
 				@include sans-serif-medium;
@@ -443,6 +447,9 @@ $teal-darker: #045874;
 				p {
 					margin-bottom: em-calc(20, 24);
 				}
+			}
+			.join-this-game {
+				margin-right:em-calc(5)
 			}
 		}
 	}
