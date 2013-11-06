@@ -99,13 +99,27 @@ $teal-darker: #045874;
 		background-color:$dark-grey;
 		&:hover {background-color:$medium-grey}
 	}
-	&.medium {
-		font-size:em-calc(18);
-		color:white;
+	// Desktop sizes
+	@include media(desktop) {
+		&.medium {
+			font-size:em-calc(18);
+			color:white;
+		}
+		&.large {
+			font-size:em-calc(24);
+			color:white;
+		}
 	}
-	&.large {
-		font-size:em-calc(24);
-		color:white;
+	// Mobile sizes
+	@include media(mobile) {
+		&.medium {
+			font-size:em-calc(24);
+			color:white;
+		}
+		&.large {
+			font-size:em-calc(36);
+			color:white;
+		}
 	}
 }
 
@@ -221,6 +235,97 @@ $teal-darker: #045874;
 	background:url('../img/sample-google-map.png') no-repeat 50% 25%;
 	margin-bottom:em-calc(20);
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GAME DETAIL ///////////////////////////////////////////////////////////////////////
+
+	.game-detail {
+		img {
+			border:1px solid $lightest-grey;
+			float:right;
+			margin:0 0 20px 20px;
+			width:33.3333%;
+		}
+		.primary-info {
+			h2 {
+				@include sans-serif-medium;
+				text-transform: uppercase;
+			}
+			h1 {
+				@include sans-serif-bold;
+			}
+			time {
+				@include sans-serif-medium;
+				display:block;
+			}
+			.button-group {
+				margin-bottom: em-calc(20);
+			}
+			.description {
+				@include serif-regular;
+			}
+			.join-this-game {
+				margin-right:em-calc(5)
+			}
+		}
+		.players {
+			@include sans-serif-medium;
+			h1 {
+				@include sans-serif-medium;
+				background-color:$dark-grey;
+				color:white;
+				text-transform: uppercase;
+			}
+			.player-list {
+				background-color:$lightest-grey;
+				.player {
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+		}
+		.comments {
+			border-top:em-calc(2) solid $dark-grey;
+			padding-top:em-calc(20);
+			.comment-form {
+				h1 {
+					@include sans-serif-medium;
+					text-transform:uppercase;
+				}
+				.comment-entry {
+					@include serif-regular;
+					width:100%;
+				}
+			}
+			.functions {
+				@include clearfix;
+				margin: em-calc(20) 0;
+				.alert-me {
+					@include sans-serif-medium;
+					float:left;
+				}
+				.button {
+					float:right;
+				}
+			}
+			.comment {
+				border-top:1px solid $dark-grey;
+				padding:em-calc(30) 0;
+				h1 {
+					@include sans-serif-medium;
+				}
+				p {
+					@include serif-regular;
+					&:nth-last-child(2) {
+						margin-bottom:0
+					}
+				}
+				time {
+					@include sans-serif-medium;
+				}
+			}
+		}
+	}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -416,38 +521,26 @@ $teal-darker: #045874;
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME DETAIL ///////////////////////////////////////////////////////////////////////
+/////// GAME DETAIL /////////////////////////////////////////////////////////////////////////
 
 	.game-detail {
-		img {
-			border:1px solid $lightest-grey;
-			float:right;
-			margin:0 0 20px 20px;
-			width:33.3333%;
-		}
 		.primary-info {
 			h2 {
-				@include sans-serif-medium;
 				font-size: em-calc(14);
-				text-transform: uppercase;
 				margin-bottom:em-calc(10, 14);
 			}
 			h1 {
-				@include sans-serif-bold;
 				font-size:em-calc(36);
 				margin-bottom:em-calc(10, 36);
 			}
 			time {
-				@include sans-serif-medium;
 				font-size: em-calc(24);
-				display:block;
 				margin-bottom: em-calc(20, 24);
 			}
 			.button-group {
-				margin-bottom: em-calc(20);
+				
 			}
 			.description {
-				@include serif-regular;
 				font-size:em-calc(24);
 				p {
 					margin-bottom: em-calc(20, 24);
@@ -460,14 +553,10 @@ $teal-darker: #045874;
 		.players {
 			@include sans-serif-medium;
 			h1 {
-				background-color:$dark-grey;
-				color:white;
 				font-size:em-calc(14);
-				text-transform: uppercase;
 				padding:em-calc(10, 14) em-calc(20, 14);
 			}
 			.player-list {
-				background-color:$lightest-grey;
 				font-size:em-calc(18);
 				margin-bottom:em-calc(40, 18);
 				padding-top:em-calc(10, 18);
@@ -475,61 +564,41 @@ $teal-darker: #045874;
 				.player {
 					width:em-calc(272, 18);
 					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
-					display:inline-block;
-					vertical-align:top;
 				}
 			}
 		}
 		.comments {
-			border-top:em-calc(2) solid $dark-grey;
-			padding-top:em-calc(20);
 			.comment-form {
 				h1 {
-					@include sans-serif-medium;
-					text-transform:uppercase;
 					font-size:em-calc(14);
 					margin-bottom:em-calc(20, 14);
 				}
 				.comment-entry {
-					@include serif-regular;
-					width:100%;
 					font-size:em-calc(24);
 					padding:em-calc(20, 24)
 				}
 			}
 			.functions {
-				@include clearfix;
-				margin: em-calc(20) 0;
 				.alert-me {
-					@include sans-serif-medium;
 					font-size:em-calc(14);
-					float:left;
 				}
 				.button {
-					float:right;
 				}
 			}
 			.comment {
-				border-top:1px solid $dark-grey;
-				padding:em-calc(30) 0;
 				h1 {
-					@include sans-serif-medium;
 					font-size:em-calc(18);
 				}
 				p {
-					@include serif-regular;
 					font-size:em-calc(18);
-					&:nth-last-child(2) {
-						margin-bottom:0
 					}
-				}
-				time {
-					@include sans-serif-medium;
+				time {		
 					font-size:em-calc(12);
 				}
 			}
 		}
 	}
+
 
 
 
@@ -598,7 +667,11 @@ $teal-darker: #045874;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// SUB FILTER BAR //////////////////////////////////////////////////////////////////////
 
-
+	.mobile-sub-filter {
+		margin:em-calc(-20) 0 em-calc(20) 0;
+		background-color:$lightest-grey;
+		padding: em-calc(20) 0 em-calc(20) 10px;
+	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// GAME TILES //////////////////////////////////////////////////////////////////////
@@ -636,13 +709,90 @@ $teal-darker: #045874;
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME TILES //////////////////////////////////////////////////////////////////////
+/////// GAME DETAIL /////////////////////////////////////////////////////////////////////////
 
-	.mobile-sub-filter {
-		margin:em-calc(-20) 0 em-calc(20) 0;
-		background-color:$lightest-grey;
-		padding: em-calc(20) 0 em-calc(20) 10px;
+	.game-detail {
+		.primary-info {
+			h2 {
+				font-size: em-calc(14);
+				margin-bottom:em-calc(10, 14);
+			}
+			h1 {
+				font-size:em-calc(36);
+				margin-bottom:em-calc(10, 36);
+			}
+			time {
+				font-size: em-calc(24);
+				margin-bottom: em-calc(20, 24);
+				span {
+					display:inline !important;
+				}
+			}
+			.button-group {
+				
+			}
+			.description {
+				font-size:em-calc(30);
+				p {
+					margin-bottom: em-calc(20, 30);
+				}
+			}
+			.join-this-game {
+				margin-right:em-calc(5)
+			}
+		}
+		.players {
+			@include sans-serif-medium;
+			h1 {
+				font-size:em-calc(24);
+				padding:em-calc(10, 24) em-calc(20, 24);
+			}
+			.player-list {
+				font-size:em-calc(24);
+				margin-bottom:em-calc(40, 24);
+				padding-top:em-calc(10, 24);
+				padding-bottom:em-calc(30, 24);
+				.player {
+					width:em-calc(256, 24);
+					margin: em-calc(10, 24) 0 0 em-calc(20, 24);
+				}
+			}
+		}
+		.comments {
+			.comment-form {
+				h1 {
+					font-size:em-calc(24);
+					margin-bottom:em-calc(20, 24);
+				}
+				.comment-entry {
+					font-size:em-calc(30);
+					padding:em-calc(20, 30)
+				}
+			}
+			.functions {
+				.alert-me {
+					font-size:em-calc(18);
+				}
+				.button {
+				}
+			}
+			.comment {
+				h1 {
+					@include sans-serif-bold;
+					font-size:em-calc(24);
+				}
+				p {
+					font-size:em-calc(30);
+					}
+				time {		
+					font-size:em-calc(18);
+					margin-top:em-calc(12, 18);
+					display:block;
+				}
+			}
+		}
 	}
+
 
 
 }

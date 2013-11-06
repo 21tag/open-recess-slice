@@ -5385,51 +5385,61 @@ ul, ol, dl {
     /* line 100, ../sass/screen.scss */
     .button.grey:hover {
       background-color: gray; }
-  /* line 102, ../sass/screen.scss */
-  .button.medium {
-    font-size: 1.125em;
-    color: white; }
-  /* line 106, ../sass/screen.scss */
-  .button.large {
-    font-size: 1.5em;
-    color: white; }
+  @media only screen and (min-width: 768px) {
+    /* line 104, ../sass/screen.scss */
+    .button.medium {
+      font-size: 1.125em;
+      color: white; }
+    /* line 108, ../sass/screen.scss */
+    .button.large {
+      font-size: 1.5em;
+      color: white; } }
+  @media only screen and (max-width: 768px) {
+    /* line 115, ../sass/screen.scss */
+    .button.medium {
+      font-size: 1.5em;
+      color: white; }
+    /* line 119, ../sass/screen.scss */
+    .button.large {
+      font-size: 2.25em;
+      color: white; } }
 
-/* line 115, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 #nav, #nav h1 {
   font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
   font-weight: 400; }
 
-/* line 124, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .intro-strip {
   background-color: #333333; }
-  /* line 126, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   .intro-strip .row {
     background-image: url("../img/player.svg");
     background-repeat: no-repeat;
     padding-top: 0.75em;
     padding-bottom: 1em; }
-  /* line 132, ../sass/screen.scss */
+  /* line 146, ../sass/screen.scss */
   .intro-strip h1 {
     font-family: "adobe-text-pro", georgia, times, sans-serif;
     font-weight: 400;
     font-style: italic;
     color: white; }
 
-/* line 139, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .no-svg .intro-strip .row {
   background-image: url("../img/player.png"); }
 
-/* line 147, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .top-filter-bar {
   font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
   font-weight: 700;
   padding: 1.25em 0 1.125em 0;
   background-color: #dce5eb;
   border-bottom: 0.125em solid #acb5bb; }
-  /* line 152, ../sass/screen.scss */
+  /* line 166, ../sass/screen.scss */
   .top-filter-bar form {
     font-size: 1.5em; }
-    /* line 154, ../sass/screen.scss */
+    /* line 168, ../sass/screen.scss */
     .top-filter-bar form input {
       width: 100%;
       height: 2.29167em;
@@ -5441,41 +5451,41 @@ ul, ol, dl {
       border: 1px solid #aaa;
       border-radius: 5px;
       background-color: #fff; }
-  /* line 166, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   .top-filter-bar .chosen-container-single .chosen-search input[type="text"] {
     background: none; }
-  /* line 169, ../sass/screen.scss */
+  /* line 183, ../sass/screen.scss */
   .top-filter-bar .chosen-container {
     width: 100% !important; }
-    /* line 171, ../sass/screen.scss */
+    /* line 185, ../sass/screen.scss */
     .top-filter-bar .chosen-container .chosen-results li {
       padding: 0.625em; }
-    /* line 174, ../sass/screen.scss */
+    /* line 188, ../sass/screen.scss */
     .top-filter-bar .chosen-container a.chosen-single {
       height: 2.29167em; }
-      /* line 176, ../sass/screen.scss */
+      /* line 190, ../sass/screen.scss */
       .top-filter-bar .chosen-container a.chosen-single span {
         color: #333333;
         margin-top: 0.65625em;
         margin-left: 0.41667em; }
-    /* line 182, ../sass/screen.scss */
+    /* line 196, ../sass/screen.scss */
     .top-filter-bar .chosen-container .chosen-single div b {
       margin-top: 17px; }
-    /* line 185, ../sass/screen.scss */
+    /* line 199, ../sass/screen.scss */
     .top-filter-bar .chosen-container .no-results {
       line-height: 1.4; }
-  /* line 189, ../sass/screen.scss */
+  /* line 203, ../sass/screen.scss */
   .top-filter-bar .in, .top-filter-bar .located-in, .top-filter-bar .show-me {
     margin-top: 0.6875em;
     text-align: right; }
-  /* line 194, ../sass/screen.scss */
+  /* line 208, ../sass/screen.scss */
   .top-filter-bar .location input {
     padding-bottom: 0.20833em;
     padding-left: 0.625em; }
-  /* line 199, ../sass/screen.scss */
+  /* line 213, ../sass/screen.scss */
   .top-filter-bar .in {
     text-align: center; }
-  /* line 202, ../sass/screen.scss */
+  /* line 216, ../sass/screen.scss */
   .top-filter-bar .search input {
     font-family: "heydings_iconsregular";
     width: 100%;
@@ -5483,134 +5493,235 @@ ul, ol, dl {
     color: white;
     box-shadow: none;
     border: none; }
-    /* line 209, ../sass/screen.scss */
+    /* line 223, ../sass/screen.scss */
     .top-filter-bar .search input:hover {
       background-color: #0697c7;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       transition: all 300ms ease-out; }
 
-/* line 219, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .google-map {
   height: 500px;
   background: url("../img/sample-google-map.png") no-repeat 50% 25%;
   margin-bottom: 1.25em; }
 
+/* line 243, ../sass/screen.scss */
+.game-detail img {
+  border: 1px solid #dadada;
+  float: right;
+  margin: 0 0 20px 20px;
+  width: 33.3333%; }
+/* line 250, ../sass/screen.scss */
+.game-detail .primary-info h2 {
+  font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase; }
+/* line 254, ../sass/screen.scss */
+.game-detail .primary-info h1 {
+  font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 700; }
+/* line 257, ../sass/screen.scss */
+.game-detail .primary-info time {
+  font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 500;
+  display: block; }
+/* line 261, ../sass/screen.scss */
+.game-detail .primary-info .button-group {
+  margin-bottom: 1.25em; }
+/* line 264, ../sass/screen.scss */
+.game-detail .primary-info .description {
+  font-family: "adobe-text-pro", georgia, times, sans-serif;
+  font-weight: 400; }
+/* line 267, ../sass/screen.scss */
+.game-detail .primary-info .join-this-game {
+  margin-right: 0.3125em; }
+/* line 271, ../sass/screen.scss */
+.game-detail .players {
+  font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 500; }
+  /* line 273, ../sass/screen.scss */
+  .game-detail .players h1 {
+    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 500;
+    background-color: #333333;
+    color: white;
+    text-transform: uppercase; }
+  /* line 279, ../sass/screen.scss */
+  .game-detail .players .player-list {
+    background-color: #dadada; }
+    /* line 281, ../sass/screen.scss */
+    .game-detail .players .player-list .player {
+      display: inline-block;
+      vertical-align: top; }
+/* line 287, ../sass/screen.scss */
+.game-detail .comments {
+  border-top: 0.125em solid #333333;
+  padding-top: 1.25em; }
+  /* line 291, ../sass/screen.scss */
+  .game-detail .comments .comment-form h1 {
+    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase; }
+  /* line 295, ../sass/screen.scss */
+  .game-detail .comments .comment-form .comment-entry {
+    font-family: "adobe-text-pro", georgia, times, sans-serif;
+    font-weight: 400;
+    width: 100%; }
+  /* line 300, ../sass/screen.scss */
+  .game-detail .comments .functions {
+    *zoom: 1;
+    margin: 1.25em 0; }
+    /* line 121, ../sass/foundation/components/_global.scss */
+    .game-detail .comments .functions:before, .game-detail .comments .functions:after {
+      content: " ";
+      display: table; }
+    /* line 122, ../sass/foundation/components/_global.scss */
+    .game-detail .comments .functions:after {
+      clear: both; }
+    /* line 303, ../sass/screen.scss */
+    .game-detail .comments .functions .alert-me {
+      font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+      font-weight: 500;
+      float: left; }
+    /* line 307, ../sass/screen.scss */
+    .game-detail .comments .functions .button {
+      float: right; }
+  /* line 311, ../sass/screen.scss */
+  .game-detail .comments .comment {
+    border-top: 1px solid #333333;
+    padding: 1.875em 0; }
+    /* line 314, ../sass/screen.scss */
+    .game-detail .comments .comment h1 {
+      font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+      font-weight: 500; }
+    /* line 317, ../sass/screen.scss */
+    .game-detail .comments .comment p {
+      font-family: "adobe-text-pro", georgia, times, sans-serif;
+      font-weight: 400; }
+      /* line 319, ../sass/screen.scss */
+      .game-detail .comments .comment p:nth-last-child(2) {
+        margin-bottom: 0; }
+    /* line 323, ../sass/screen.scss */
+    .game-detail .comments .comment time {
+      font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+      font-weight: 500; }
+
 @media only screen and (min-width: 768px) {
-  /* line 246, ../sass/screen.scss */
+  /* line 351, ../sass/screen.scss */
   .intro-strip .row {
     background-size: auto 92%;
     background-position: right bottom; }
-  /* line 250, ../sass/screen.scss */
+  /* line 355, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 116px 0 0;
     font-size: 1.875em;
     line-height: 1.4; }
 
-  /* line 256, ../sass/screen.scss */
+  /* line 361, ../sass/screen.scss */
   #nav {
     padding: 0.625em 0;
     background-color: #0584ad; }
-    /* line 259, ../sass/screen.scss */
+    /* line 364, ../sass/screen.scss */
     #nav .block {
       background-color: #0584ad; }
-    /* line 262, ../sass/screen.scss */
+    /* line 367, ../sass/screen.scss */
     #nav h1 {
       font-size: 2.1875em;
       position: relative;
       bottom: -0.17143em; }
-    /* line 267, ../sass/screen.scss */
+    /* line 372, ../sass/screen.scss */
     #nav ul {
       font-size: 1.125em; }
-      /* line 269, ../sass/screen.scss */
+      /* line 374, ../sass/screen.scss */
       #nav ul li {
         padding-bottom: 0.16667em;
         height: 1.94444em;
         position: relative;
         bottom: -0.55556em; }
-        /* line 274, ../sass/screen.scss */
+        /* line 379, ../sass/screen.scss */
         #nav ul li.selected, #nav ul li:hover {
           background: url("../img/nav-triangle-small.png") no-repeat 64% bottom; }
 
-  /* line 284, ../sass/screen.scss */
+  /* line 389, ../sass/screen.scss */
   .sub-filter-bar {
     padding: 0.9375em 10px;
     margin: 0 auto 1.25em auto;
     border: 1px solid #bfbfbf;
     background-color: #dadada; }
-    /* line 289, ../sass/screen.scss */
+    /* line 394, ../sass/screen.scss */
     .sub-filter-bar .option {
       float: left;
       font-size: 0.875em;
       margin-right: 1.07143em; }
-      /* line 293, ../sass/screen.scss */
+      /* line 398, ../sass/screen.scss */
       .sub-filter-bar .option.filter-by, .sub-filter-bar .option.players-needed {
         position: relative;
         top: 0.71429em; }
-      /* line 297, ../sass/screen.scss */
+      /* line 402, ../sass/screen.scss */
       .sub-filter-bar .option.date {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 500; }
-        /* line 299, ../sass/screen.scss */
+        /* line 404, ../sass/screen.scss */
         .sub-filter-bar .option.date input {
           padding-left: 0.35714em;
           height: 2.35714em;
           background: white url(../img/calendar-icon.svg) no-repeat 95% center;
           background-size: auto 60%; }
-      /* line 306, ../sass/screen.scss */
+      /* line 411, ../sass/screen.scss */
       .sub-filter-bar .option.filter-by {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 700;
         text-transform: uppercase; }
-      /* line 311, ../sass/screen.scss */
+      /* line 416, ../sass/screen.scss */
       .sub-filter-bar .option.players-needed input {
         position: relative; }
-      /* line 315, ../sass/screen.scss */
+      /* line 420, ../sass/screen.scss */
       .sub-filter-bar .option.players-needed span {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 500;
         margin-left: 0.35714em; }
 
-  /* line 324, ../sass/screen.scss */
+  /* line 429, ../sass/screen.scss */
   #ui-datepicker-div {
     font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
     font-weight: 400; }
-    /* line 326, ../sass/screen.scss */
+    /* line 431, ../sass/screen.scss */
     #ui-datepicker-div .ui-datepicker-calendar {
       border: none; }
-    /* line 329, ../sass/screen.scss */
+    /* line 434, ../sass/screen.scss */
     #ui-datepicker-div .ui-datepicker-header {
       background: #dadada;
       border: none; }
-    /* line 334, ../sass/screen.scss */
+    /* line 439, ../sass/screen.scss */
     #ui-datepicker-div a.ui-state-default {
       background: #dadada; }
-      /* line 336, ../sass/screen.scss */
+      /* line 441, ../sass/screen.scss */
       #ui-datepicker-div a.ui-state-default:hover {
         border: 1px solid #0584ad;
         background: #0584ad;
         color: white; }
-    /* line 342, ../sass/screen.scss */
+    /* line 447, ../sass/screen.scss */
     #ui-datepicker-div a.ui-state-highlight, #ui-datepicker-div a.ui-state-active {
       border: 1px solid #0584ad;
       background: #0584ad;
       color: white; }
-    /* line 347, ../sass/screen.scss */
+    /* line 452, ../sass/screen.scss */
     #ui-datepicker-div a.ui-state-hover {
       background: none;
       border: none;
       top: 2px; }
-    /* line 352, ../sass/screen.scss */
+    /* line 457, ../sass/screen.scss */
     #ui-datepicker-div a.ui-datepicker-prev-hover {
       left: 2px; }
-    /* line 355, ../sass/screen.scss */
+    /* line 460, ../sass/screen.scss */
     #ui-datepicker-div a.ui-datepicker-next-hover {
       right: 2px; }
 
-  /* line 366, ../sass/screen.scss */
+  /* line 471, ../sass/screen.scss */
   .game-tiles {
     margin: 0 0 1.25em -1.25em; }
-    /* line 368, ../sass/screen.scss */
+    /* line 473, ../sass/screen.scss */
     .game-tiles .item {
       width: 292px;
       position: relative;
@@ -5618,10 +5729,10 @@ ul, ol, dl {
       margin-left: 1.25em;
       display: inline-block;
       vertical-align: top; }
-      /* line 375, ../sass/screen.scss */
+      /* line 480, ../sass/screen.scss */
       .game-tiles .item a, .game-tiles .item a:hover, .game-tiles .item a:focus {
         color: #333333; }
-      /* line 378, ../sass/screen.scss */
+      /* line 483, ../sass/screen.scss */
       .game-tiles .item .caption {
         position: absolute;
         bottom: 0;
@@ -5629,199 +5740,140 @@ ul, ol, dl {
         opacity: .9;
         width: 100%;
         padding: 0.625em; }
-        /* line 385, ../sass/screen.scss */
+        /* line 490, ../sass/screen.scss */
         .game-tiles .item .caption h2 {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 700;
           font-size: 0.75em;
           text-transform: uppercase;
           margin-bottom: 0.41667em; }
-        /* line 391, ../sass/screen.scss */
+        /* line 496, ../sass/screen.scss */
         .game-tiles .item .caption h1 {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 700;
           font-size: 1.5em;
           margin-bottom: 0.20833em; }
-        /* line 396, ../sass/screen.scss */
+        /* line 501, ../sass/screen.scss */
         .game-tiles .item .caption time {
           font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
           font-weight: 500;
           font-size: 1.125em; }
-      /* line 402, ../sass/screen.scss */
+      /* line 507, ../sass/screen.scss */
       .game-tiles .item:hover img {
         -webkit-transition: all 300ms ease-out;
         -moz-transition: all 300ms ease-out;
         transition: all 300ms ease-out;
         opacity: .7; }
-      /* line 406, ../sass/screen.scss */
+      /* line 511, ../sass/screen.scss */
       .game-tiles .item:hover .caption {
         opacity: 1;
         background-color: #0584ad;
         color: white; }
-        /* line 410, ../sass/screen.scss */
+        /* line 515, ../sass/screen.scss */
         .game-tiles .item:hover .caption h1, .game-tiles .item:hover .caption h2 {
           color: white; }
 
-  /* line 422, ../sass/screen.scss */
-  .game-detail img {
-    border: 1px solid #dadada;
-    float: right;
-    margin: 0 0 20px 20px;
-    width: 33.3333%; }
-  /* line 429, ../sass/screen.scss */
+  /* line 528, ../sass/screen.scss */
   .game-detail .primary-info h2 {
-    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-    font-weight: 500;
     font-size: 0.875em;
-    text-transform: uppercase;
     margin-bottom: 0.71429em; }
-  /* line 435, ../sass/screen.scss */
+  /* line 532, ../sass/screen.scss */
   .game-detail .primary-info h1 {
-    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-    font-weight: 700;
     font-size: 2.25em;
     margin-bottom: 0.27778em; }
-  /* line 440, ../sass/screen.scss */
+  /* line 536, ../sass/screen.scss */
   .game-detail .primary-info time {
-    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-    font-weight: 500;
     font-size: 1.5em;
-    display: block;
     margin-bottom: 0.83333em; }
-  /* line 446, ../sass/screen.scss */
-  .game-detail .primary-info .button-group {
-    margin-bottom: 1.25em; }
-  /* line 449, ../sass/screen.scss */
+  /* line 543, ../sass/screen.scss */
   .game-detail .primary-info .description {
-    font-family: "adobe-text-pro", georgia, times, sans-serif;
-    font-weight: 400;
     font-size: 1.5em; }
-    /* line 452, ../sass/screen.scss */
+    /* line 545, ../sass/screen.scss */
     .game-detail .primary-info .description p {
       margin-bottom: 0.83333em; }
-  /* line 456, ../sass/screen.scss */
+  /* line 549, ../sass/screen.scss */
   .game-detail .primary-info .join-this-game {
     margin-right: 0.3125em; }
-  /* line 460, ../sass/screen.scss */
+  /* line 553, ../sass/screen.scss */
   .game-detail .players {
     font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
     font-weight: 500; }
-    /* line 462, ../sass/screen.scss */
+    /* line 555, ../sass/screen.scss */
     .game-detail .players h1 {
-      background-color: #333333;
-      color: white;
       font-size: 0.875em;
-      text-transform: uppercase;
       padding: 0.71429em 1.42857em; }
-    /* line 469, ../sass/screen.scss */
+    /* line 559, ../sass/screen.scss */
     .game-detail .players .player-list {
-      background-color: #dadada;
       font-size: 1.125em;
       margin-bottom: 2.22222em;
       padding-top: 0.55556em;
       padding-bottom: 1.66667em; }
-      /* line 475, ../sass/screen.scss */
+      /* line 564, ../sass/screen.scss */
       .game-detail .players .player-list .player {
         width: 15.11111em;
-        margin: 0.55556em 0 0 1.11111em;
-        display: inline-block;
-        vertical-align: top; }
-  /* line 483, ../sass/screen.scss */
-  .game-detail .comments {
-    border-top: 0.125em solid #333333;
-    padding-top: 1.25em; }
-    /* line 487, ../sass/screen.scss */
-    .game-detail .comments .comment-form h1 {
-      font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 0.875em;
-      margin-bottom: 1.42857em; }
-    /* line 493, ../sass/screen.scss */
-    .game-detail .comments .comment-form .comment-entry {
-      font-family: "adobe-text-pro", georgia, times, sans-serif;
-      font-weight: 400;
-      width: 100%;
-      font-size: 1.5em;
-      padding: 0.83333em; }
-    /* line 500, ../sass/screen.scss */
-    .game-detail .comments .functions {
-      *zoom: 1;
-      margin: 1.25em 0; }
-      /* line 121, ../sass/foundation/components/_global.scss */
-      .game-detail .comments .functions:before, .game-detail .comments .functions:after {
-        content: " ";
-        display: table; }
-      /* line 122, ../sass/foundation/components/_global.scss */
-      .game-detail .comments .functions:after {
-        clear: both; }
-      /* line 503, ../sass/screen.scss */
-      .game-detail .comments .functions .alert-me {
-        font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-        font-weight: 500;
-        font-size: 0.875em;
-        float: left; }
-      /* line 508, ../sass/screen.scss */
-      .game-detail .comments .functions .button {
-        float: right; }
-    /* line 512, ../sass/screen.scss */
-    .game-detail .comments .comment {
-      border-top: 1px solid #333333;
-      padding: 1.875em 0; }
-      /* line 515, ../sass/screen.scss */
-      .game-detail .comments .comment h1 {
-        font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-        font-weight: 500;
-        font-size: 1.125em; }
-      /* line 519, ../sass/screen.scss */
-      .game-detail .comments .comment p {
-        font-family: "adobe-text-pro", georgia, times, sans-serif;
-        font-weight: 400;
-        font-size: 1.125em; }
-        /* line 522, ../sass/screen.scss */
-        .game-detail .comments .comment p:nth-last-child(2) {
-          margin-bottom: 0; }
-      /* line 526, ../sass/screen.scss */
-      .game-detail .comments .comment time {
-        font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
-        font-weight: 500;
-        font-size: 0.75em; } }
+        margin: 0.55556em 0 0 1.11111em; }
+  /* line 572, ../sass/screen.scss */
+  .game-detail .comments .comment-form h1 {
+    font-size: 0.875em;
+    margin-bottom: 1.42857em; }
+  /* line 576, ../sass/screen.scss */
+  .game-detail .comments .comment-form .comment-entry {
+    font-size: 1.5em;
+    padding: 0.83333em; }
+  /* line 582, ../sass/screen.scss */
+  .game-detail .comments .functions .alert-me {
+    font-size: 0.875em; }
+  /* line 589, ../sass/screen.scss */
+  .game-detail .comments .comment h1 {
+    font-size: 1.125em; }
+  /* line 592, ../sass/screen.scss */
+  .game-detail .comments .comment p {
+    font-size: 1.125em; }
+  /* line 595, ../sass/screen.scss */
+  .game-detail .comments .comment time {
+    font-size: 0.75em; } }
 @media only screen and (max-width: 768px) {
-  /* line 559, ../sass/screen.scss */
+  /* line 628, ../sass/screen.scss */
   #top {
     background-color: #0584ad;
     border-bottom: 2px solid #045874; }
-    /* line 562, ../sass/screen.scss */
+    /* line 631, ../sass/screen.scss */
     #top h1 {
       font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
       font-weight: 700;
       font-size: 1em; }
-    /* line 566, ../sass/screen.scss */
+    /* line 635, ../sass/screen.scss */
     #top .block-title {
       font-size: 2.1875em; }
-    /* line 569, ../sass/screen.scss */
+    /* line 638, ../sass/screen.scss */
     #top .nav-btn {
       top: 1.7em;
       background: #0584ad url("../img/nav-icon-1.svg") left center no-repeat; }
 
-  /* line 580, ../sass/screen.scss */
+  /* line 649, ../sass/screen.scss */
   .intro-strip .row {
     background-position: 98% bottom;
     background-size: auto 90%; }
-  /* line 584, ../sass/screen.scss */
+  /* line 653, ../sass/screen.scss */
   .intro-strip h1 {
     padding: 0 23% 0 0;
     font-size: 1.875em;
     text-shadow: 0 0 4px black; }
 
-  /* line 594, ../sass/screen.scss */
+  /* line 663, ../sass/screen.scss */
   .game-type-container {
     margin-bottom: .82em; }
 
-  /* line 606, ../sass/screen.scss */
+  /* line 670, ../sass/screen.scss */
+  .mobile-sub-filter {
+    margin: -1.25em 0 1.25em 0;
+    background-color: #dadada;
+    padding: 1.25em 0 1.25em 10px; }
+
+  /* line 679, ../sass/screen.scss */
   .game-tiles {
     margin: 0 0 1.25em 0; }
-    /* line 608, ../sass/screen.scss */
+    /* line 681, ../sass/screen.scss */
     .game-tiles .item {
       *zoom: 1;
       width: 100%;
@@ -5838,27 +5890,88 @@ ul, ol, dl {
       /* line 122, ../sass/foundation/components/_global.scss */
       .game-tiles .item:after {
         clear: both; }
-      /* line 617, ../sass/screen.scss */
+      /* line 690, ../sass/screen.scss */
       .game-tiles .item a, .game-tiles .item a:hover, .game-tiles .item a:focus {
         color: #333333; }
-      /* line 621, ../sass/screen.scss */
+      /* line 694, ../sass/screen.scss */
       .game-tiles .item .caption h1 {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 700;
         font-size: 2.25em; }
-      /* line 625, ../sass/screen.scss */
+      /* line 698, ../sass/screen.scss */
       .game-tiles .item .caption time {
         font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
         font-weight: 500;
         font-size: 1.5em; }
-      /* line 630, ../sass/screen.scss */
+      /* line 703, ../sass/screen.scss */
       .game-tiles .item img {
         float: right;
         width: 25%;
         margin-left: 20px; }
 
-  /* line 641, ../sass/screen.scss */
-  .mobile-sub-filter {
-    margin: -1.25em 0 1.25em 0;
-    background-color: #dadada;
-    padding: 1.25em 0 1.25em 10px; } }
+  /* line 716, ../sass/screen.scss */
+  .game-detail .primary-info h2 {
+    font-size: 0.875em;
+    margin-bottom: 0.71429em; }
+  /* line 720, ../sass/screen.scss */
+  .game-detail .primary-info h1 {
+    font-size: 2.25em;
+    margin-bottom: 0.27778em; }
+  /* line 724, ../sass/screen.scss */
+  .game-detail .primary-info time {
+    font-size: 1.5em;
+    margin-bottom: 0.83333em; }
+    /* line 727, ../sass/screen.scss */
+    .game-detail .primary-info time span {
+      display: inline !important; }
+  /* line 734, ../sass/screen.scss */
+  .game-detail .primary-info .description {
+    font-size: 1.875em; }
+    /* line 736, ../sass/screen.scss */
+    .game-detail .primary-info .description p {
+      margin-bottom: 0.66667em; }
+  /* line 740, ../sass/screen.scss */
+  .game-detail .primary-info .join-this-game {
+    margin-right: 0.3125em; }
+  /* line 744, ../sass/screen.scss */
+  .game-detail .players {
+    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 500; }
+    /* line 746, ../sass/screen.scss */
+    .game-detail .players h1 {
+      font-size: 1.5em;
+      padding: 0.41667em 0.83333em; }
+    /* line 750, ../sass/screen.scss */
+    .game-detail .players .player-list {
+      font-size: 1.5em;
+      margin-bottom: 1.66667em;
+      padding-top: 0.41667em;
+      padding-bottom: 1.25em; }
+      /* line 755, ../sass/screen.scss */
+      .game-detail .players .player-list .player {
+        width: 10.66667em;
+        margin: 0.41667em 0 0 0.83333em; }
+  /* line 763, ../sass/screen.scss */
+  .game-detail .comments .comment-form h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.83333em; }
+  /* line 767, ../sass/screen.scss */
+  .game-detail .comments .comment-form .comment-entry {
+    font-size: 1.875em;
+    padding: 0.66667em; }
+  /* line 773, ../sass/screen.scss */
+  .game-detail .comments .functions .alert-me {
+    font-size: 1.125em; }
+  /* line 780, ../sass/screen.scss */
+  .game-detail .comments .comment h1 {
+    font-family: "dejarip", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5em; }
+  /* line 784, ../sass/screen.scss */
+  .game-detail .comments .comment p {
+    font-size: 1.875em; }
+  /* line 787, ../sass/screen.scss */
+  .game-detail .comments .comment time {
+    font-size: 1.125em;
+    margin-top: 0.66667em;
+    display: block; } }
