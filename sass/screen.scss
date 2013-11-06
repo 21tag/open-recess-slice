@@ -163,6 +163,9 @@ $teal-darker: #045874;
 		  background-color: #fff;
  		}
  	}
+ 	.chosen-container-single .chosen-search input[type="text"] {
+ 		background:none;
+ 	}
  	.chosen-container {
  		width:100% !important;
  		.chosen-results li {
@@ -440,10 +443,12 @@ $teal-darker: #045874;
 				display:block;
 				margin-bottom: em-calc(20, 24);
 			}
+			.button-group {
+				margin-bottom: em-calc(20);
+			}
 			.description {
 				@include serif-regular;
 				font-size:em-calc(24);
-				margin-top: em-calc(20, 24);
 				p {
 					margin-bottom: em-calc(20, 24);
 				}
@@ -452,7 +457,80 @@ $teal-darker: #045874;
 				margin-right:em-calc(5)
 			}
 		}
+		.players {
+			@include sans-serif-medium;
+			h1 {
+				background-color:$dark-grey;
+				color:white;
+				font-size:em-calc(14);
+				text-transform: uppercase;
+				padding:em-calc(10, 14) em-calc(20, 14);
+			}
+			.player-list {
+				background-color:$lightest-grey;
+				font-size:em-calc(18);
+				margin-bottom:em-calc(40, 18);
+				padding-top:em-calc(10, 18);
+				padding-bottom:em-calc(30, 18);
+				.player {
+					width:em-calc(272, 18);
+					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+		}
+		.comments {
+			border-top:em-calc(2) solid $dark-grey;
+			padding-top:em-calc(20);
+			.comment-form {
+				h1 {
+					@include sans-serif-medium;
+					text-transform:uppercase;
+					font-size:em-calc(14);
+					margin-bottom:em-calc(20, 14);
+				}
+				.comment-entry {
+					@include serif-regular;
+					width:100%;
+					font-size:em-calc(24);
+					padding:em-calc(20, 24)
+				}
+			}
+			.functions {
+				@include clearfix;
+				margin: em-calc(20) 0;
+				.alert-me {
+					@include sans-serif-medium;
+					font-size:em-calc(14);
+					float:left;
+				}
+				.button {
+					float:right;
+				}
+			}
+			.comment {
+				border-top:1px solid $dark-grey;
+				padding:em-calc(30) 0;
+				h1 {
+					@include sans-serif-medium;
+					font-size:em-calc(18);
+				}
+				p {
+					@include serif-regular;
+					font-size:em-calc(18);
+					&:nth-last-child(2) {
+						margin-bottom:0
+					}
+				}
+				time {
+					@include sans-serif-medium;
+					font-size:em-calc(12);
+				}
+			}
+		}
 	}
+
 
 
 }
