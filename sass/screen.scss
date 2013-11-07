@@ -263,15 +263,47 @@ $teal-darker: #045874;
 				.settings {
 					height:2em;
 					vertical-align: bottom;
-					// top:-.1em;
 					position:relative;
-					span {
+					&:hover {
+						cursor: pointer;
+					}
+					.icon {
 						font-family:"heydings_iconsregular";
 						top:.1em;
 						font-size:2em;
 						padding:0;
 						line-height: 0;
 						position:relative;
+					}
+					.settings-container {
+						position:absolute;
+						bottom:0;
+						left:-1.2em;
+						ul {
+							position:absolute;
+							background-color:$dark-grey;
+							li {
+								@include sans-serif-medium;
+								white-space: nowrap;
+								padding: .5em 1em .8em .8em;
+								line-height:1em;
+								&.selected, &:hover {
+									background-color:$medium-grey;
+									cursor: pointer;
+									@include single-transition;
+								}
+								a {
+									display:block;
+								}
+								span {
+									font-family:"heydings_iconsregular";
+									font-size: 1.4em;
+									top:.18em;
+									position:relative;
+									margin-right:.3em
+								}
+							}
+						}
 					}
 				}
 			}
