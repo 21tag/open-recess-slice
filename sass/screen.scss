@@ -260,6 +260,20 @@ $teal-darker: #045874;
 			}
 			.button-group {
 				margin-bottom: em-calc(20);
+				.settings {
+					height:2em;
+					vertical-align: bottom;
+					// top:-.1em;
+					position:relative;
+					span {
+						font-family:"heydings_iconsregular";
+						top:.1em;
+						font-size:2em;
+						padding:0;
+						line-height: 0;
+						position:relative;
+					}
+				}
 			}
 			.description {
 				@include serif-regular;
