@@ -136,7 +136,7 @@
               <span>Filter games by:</span>
             </div>
             <div class="option date">
-              <input type="text" id="datepicker" placeholder="Date" />
+              <input type="text" class="datepicker" placeholder="Date" />
             </div>
             <div class="option players-needed">
               <input class="checkbox" type="checkbox" /> <span>Players Needed</span>
@@ -243,7 +243,7 @@
             <div class="comments">
               <form class="comment-form">
                 <h1>Leave a Comment</h1>
-                <textarea class="comment-entry" rows="4" cols="50"/></textarea>
+                <textarea class="comment-entry" rows="4" cols="50"></textarea>
                 <div class="functions">
                   <div class="alert-me">
                     <input class="checkbox" type="checkbox" />
@@ -276,6 +276,90 @@
             </div>
           </div>
         </div>
+
+      
+        <form class="list-a-game">
+          
+          <div class="row">
+            <div class="small-6 columns">
+              <div class="form-label">What kind of game?</div>
+              <select class="game-type chosen-select">
+                <option value="all-games">All Games</option>
+                <option value="baseball">Baseball</option>
+                <option value="baseball">Tennis</option>
+                <option value="football">Football</option>
+              </select>
+            </div>
+            <div class="small-6 columns">
+              <div class="form-label">Give it a catchy title</div>
+              <input type="text" />
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="small-12 columns">
+              <div class="form-label">Give it an exciting description:</div>
+              <textarea></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <div class="form-label">Where is it? Click the map to drop a pin.</div>
+              <div class="small-12 columns google-map"></div>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="small-6 columns">
+              <div class="form-label">When's it happening?</div>
+              <input type="text" class="datepicker" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-6 columns">
+              <div class="form-label">What time?</div>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="row">
+            
+            <div class="small-3 columns">
+              <div class="form-label">Minimum players</div>
+              <select class="players chosen-select">
+                <option value="all-games">Any</option>
+                <option value="baseball">1</option>
+                <option value="baseball">2</option>
+                <option value="football">3</option>
+              </select>
+            </div>
+
+            <div class="small-3 columns">
+              <div class="form-label">Maximum players</div>
+              <select class="players chosen-select">
+                <option value="all-games">Any</option>
+                <option value="baseball">1</option>
+                <option value="baseball">2</option>
+                <option value="football">3</option>
+              </select>
+            </div>
+
+            <div class="small-3 columns"></div>
+            <div class="small-3 columns"></div>
+
+          </div>
+
+          <div class="row">
+            <div class="small-3 columns">
+              <div class="form-label inline">Maximum players</div>
+              <input type="text" />
+            </div>
+          </div>
+
+
+        </form>
 
       </div>
 

@@ -6,6 +6,6 @@ $(document).ready(function() {
 	// Game dropdown on homepage
 	$('.chosen-select').chosen();
 
-    $( "#datepicker" ).datepicker();
+    $( ".datepicker" ).datepicker();
 
 });
