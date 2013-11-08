@@ -167,7 +167,7 @@ $teal-darker: #045874;
  		font-size:em-calc(24);
  		input {
  			width:100%;
- 			height: em-calc(55, 24);
+ 			height: em-calc(63, 24);
  			padding-left:.3em;
  			padding-top:.3em;
  			color:$dark-grey;
@@ -208,6 +208,7 @@ $teal-darker: #045874;
  		input {
  			padding-bottom:em-calc(5, 24);
  			padding-left:em-calc(15, 24);
+ 			margin-bottom:0;
  		}
  	}
  	.in {
@@ -220,6 +221,8 @@ $teal-darker: #045874;
  		color:white;
  		box-shadow: none;
  		border: none;
+ 		height:em-calc(37);
+ 		padding-bottom:em-calc(8, 24);
  		&:hover {
  			background-color:$teal-lighter;
  			@include single-transition;
@@ -284,6 +287,7 @@ $teal-darker: #045874;
 						background-color:$dark-grey;
 						li {
 							@include sans-serif-medium;
+							@include clearfix;
 							white-space: nowrap;
 							padding: .5em 1em .8em .8em;
 							line-height:1em;
@@ -294,13 +298,14 @@ $teal-darker: #045874;
 							}
 							a {
 								display:block;
+								@include clearfix;
 							}
 							span {
 								font-family:"heydings_iconsregular";
 								font-size: 1.4em;
 								top:.18em;
 								position:relative;
-								margin-right:.3em
+								margin-right:.3em;
 							}
 						}
 					}
@@ -455,6 +460,7 @@ $teal-darker: #045874;
 					height: em-calc(33, 14);
 					background: white url(../img/calendar-icon.svg) no-repeat 95% center;
 					background-size: auto 60%;
+					margin-bottom:0;
 				}
 			}
 			&.filter-by {
