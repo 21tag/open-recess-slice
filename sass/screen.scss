@@ -123,11 +123,11 @@ $orange: #ef7805;
 	// Mobile sizes
 	@include media(mobile) {
 		&.medium {
-			font-size:em-calc(24);
+			font-size:em-calc(18);
 			color:white;
 		}
 		&.large {
-			font-size:em-calc(36);
+			font-size:em-calc(24);
 			color:white;
 		}
 	}
@@ -154,8 +154,14 @@ $orange: #ef7805;
 .open-recess-form { // Be sure to attach this class to any form that needs OpenRecess' custom form styles
 	.form-label {
 		@include sans-serif-medium;
-		font-size:em-calc(24);
-		margin-bottom:em-calc(10, 24);
+		@include media(desktop) {
+			font-size:em-calc(24);
+			margin-bottom:em-calc(10, 24);
+		}
+		@include media(mobile) {
+			font-size:em-calc(18);
+			margin-bottom:em-calc(10, 18);
+		}
 	}
 	input[type="text"] {
 		font-size:em-calc(24);
@@ -256,10 +262,8 @@ $orange: #ef7805;
  	background-color:#dce5eb;
  	border-bottom:em-calc(2) solid #acb5bb;
  	form {
- 		font-size:em-calc(24);
  		input {
  			width:100%;
- 			height: em-calc(63, 24);
  			padding-left:.3em;
  			padding-top:.3em;
  			color:$dark-grey;
@@ -292,10 +296,6 @@ $orange: #ef7805;
  			line-height:1.4;
  		}
  	}
- 	.in, .located-in, .show-me {
- 		margin-top:em-calc(11);
- 		text-align: right;
- 	}
  	.location {
  		input {
  			padding-bottom:em-calc(5, 24);
@@ -313,7 +313,6 @@ $orange: #ef7805;
  		color:white;
  		box-shadow: none;
  		border: none;
- 		height:em-calc(37);
  		padding-bottom:em-calc(8, 24);
  		&:hover {
  			background-color:$teal-lighter;
@@ -380,6 +379,9 @@ $orange: #ef7805;
 				position:relative;
 				&:hover {
 					cursor: pointer;
+					ul {
+						display:block !important;
+					}
 				}
 				.icon {
 					font-family:"heydings_iconsregular";
@@ -394,6 +396,7 @@ $orange: #ef7805;
 					bottom:0;
 					left:-1.2em;
 					ul {
+						display:none;
 						position:absolute;
 						background-color:$dark-grey;
 						li {
@@ -557,6 +560,28 @@ $orange: #ef7805;
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+/////// TOP FILTER BAR //////////////////////////////////////////////////////////////////////
+
+ 	.in, .located-in, .show-me {
+ 		margin-top:em-calc(11);
+ 		text-align: left;
+ 	}
+
+ 	.top-filter-bar {
+ 		form {
+ 			font-size:em-calc(24);
+ 			input {
+ 				height: em-calc(63, 24);
+ 			}
+ 		}
+ 		.search {
+ 			input {
+ 				height:em-calc(63, 24);
+ 			}
+ 		}
+ 	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 /////// START SUB-NAV BAR ///////////////////////////////////////////////////////////////////////
 
 	.sub-filter-bar {
@@ -712,6 +737,9 @@ $orange: #ef7805;
 				margin-bottom: em-calc(20, 24);
 			}
 			.button-group {
+				.settings-holder {
+					display:inline;
+				}
 				
 			}
 			.description {
@@ -721,7 +749,7 @@ $orange: #ef7805;
 				}
 			}
 			.join-this-game {
-				margin-right:em-calc(5)
+				margin-right:em-calc(5);
 			}
 		}
 		.players {
@@ -809,7 +837,14 @@ $orange: #ef7805;
 
 @include media(mobile) {
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GENERAL /////////////////////////////////////////////////////////////////////
 	
+
+	p {
+		line-height:1.2;
+	}
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// NAV BAR /////////////////////////////////////////////////////////////////////
 
@@ -840,7 +875,7 @@ $orange: #ef7805;
 		}
 		h1 {
 			padding: 0 23% 0 0;
-			font-size: em-calc(30);
+			font-size: em-calc(24);
 			text-shadow: 0 0 4px rgba(0,0,0,1);
 		}
 	}
@@ -848,8 +883,19 @@ $orange: #ef7805;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// TOP FILTER BAR //////////////////////////////////////////////////////////////////////
 
+	.top-filter-bar{
+		form {
+ 			font-size:em-calc(18);
+ 			input {
+ 				height: em-calc(48, 18);
+ 			}
+ 		}
+	}
 	.game-type-container {
-		margin-bottom:.82em;
+		// margin-bottom:.82em;
+	}
+	.show-me, .located-in {
+		margin-bottom:em-calc(8, 14);
 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -881,9 +927,9 @@ $orange: #ef7805;
 			.caption {
 				h1 {
 					@include sans-serif-bold;
-					font-size:em-calc(36);
-					line-height: 1.2;
-					margin-bottom:em-calc(5,36);
+					font-size:em-calc(30);
+					line-height: 1.1;
+					margin-bottom:em-calc(5,30);
 				}
 				time {
 					@include sans-serif-medium;
@@ -920,32 +966,35 @@ $orange: #ef7805;
 				}
 			}
 			.button-group {
-				
+				.settings-holder {
+					display:block;
+					margin:em-calc(20 0)
+				}
 			}
 			.description {
-				font-size:em-calc(30);
+				font-size:em-calc(24);
 				p {
-					margin-bottom: em-calc(20, 30);
+					margin-bottom: em-calc(24, 24);
 				}
 			}
 			.join-this-game {
-				margin-right:em-calc(5)
+				margin-right:em-calc(5);
 			}
 		}
 		.players {
 			@include sans-serif-medium;
 			h1 {
-				font-size:em-calc(24);
-				padding:em-calc(10, 24) em-calc(20, 24);
+				font-size:em-calc(18);
+				padding:em-calc(10, 18) em-calc(20, 18);
 			}
 			.player-list {
-				font-size:em-calc(24);
-				margin-bottom:em-calc(40, 24);
-				padding-top:em-calc(10, 24);
-				padding-bottom:em-calc(30, 24);
+				font-size:em-calc(18);
+				margin-bottom:em-calc(40, 18);
+				padding-top:em-calc(10, 18);
+				padding-bottom:em-calc(30, 18);
 				.player {
-					width:em-calc(256, 24);
-					margin: em-calc(10, 24) 0 0 em-calc(20, 24);
+					width:em-calc(256, 18);
+					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
 				}
 			}
 		}
@@ -956,13 +1005,19 @@ $orange: #ef7805;
 					margin-bottom:em-calc(20, 24);
 				}
 				.comment-entry {
-					font-size:em-calc(30);
-					padding:em-calc(20, 30)
+					font-size:em-calc(18);
+					padding:em-calc(20, 18);
 				}
 			}
 			.functions {
 				.alert-me {
 					font-size:em-calc(18);
+					span {
+						line-height:1.2;
+					}
+					.checkbox {
+						margin-bottom:0;
+					}
 				}
 				.button {
 				}
@@ -970,14 +1025,14 @@ $orange: #ef7805;
 			.comment {
 				h1 {
 					@include sans-serif-bold;
-					font-size:em-calc(24);
+					font-size:em-calc(18);
 				}
 				p {
-					font-size:em-calc(30);
+					font-size:em-calc(18);
 					}
 				time {		
-					font-size:em-calc(18);
-					margin-top:em-calc(12, 18);
+					font-size:em-calc(14);
+					margin-top:em-calc(4, 14);
 					display:block;
 				}
 			}
