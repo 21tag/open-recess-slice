@@ -124,6 +124,63 @@ $teal-darker: #045874;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+/////// CUSTOM FORM STYLES /////////////////////////////////////////////////////////////////////////
+
+
+.open-recess-form { // Be sure to attach this class to any form that needs OpenRecess' custom form styles
+	.form-label {
+		@include sans-serif-medium;
+		font-size:em-calc(24);
+		margin-bottom:em-calc(10, 24);
+	}
+	input[type="text"] {
+		font-size:em-calc(24);
+		@include serif-regular;
+		height:em-calc(48, 24);
+	}
+	textarea {
+		font-size:em-calc(24);
+		@include serif-regular;
+		height:em-calc(100, 24);
+	}
+	.chosen-container {
+ 		@include sans-serif-medium;
+ 		font-size:em-calc(24);
+ 		height:em-calc(48, 24);
+ 		width:100% !important;
+ 		margin-bottom:1em; // This matches the default Zurb input bottom margin of 1em so adjust in tandem with Zurb if necessary
+ 		.chosen-results li {
+ 			padding:em-calc(10);
+ 		}
+ 		a.chosen-single {
+ 			height: em-calc(43, 24);
+	 		span {
+	 			color: $dark-grey;
+	 			margin-top:em-calc(9, 24);
+	 			margin-left:em-calc(10, 24);
+	 		}
+	 	}
+	 	.chosen-single div b {
+ 			margin-top: 17px;
+ 		}
+ 		.no-results {
+ 			line-height:1.4;
+ 		}
+ 	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// CUSTOM TABLE STYLES ////////////////////////////////////////////////////////////////////////////
+
+.open-recess-table { // Be sure to attach this class to any form that needs OpenRecess' custom form styles
+	@include sans-serif-medium;
+	thead {
+		text-transform: uppercase;
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 /////// NAV BAR ////////////////////////////////////////////////////////////////////////////
 
 #nav, #nav h1 {
@@ -378,8 +435,6 @@ $teal-darker: #045874;
 	}
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// LIST A GAME /////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
