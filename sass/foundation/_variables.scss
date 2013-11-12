@@ -1194,11 +1194,11 @@ $table-head-bg: #333333;
 $table-head-font-size: em-calc(14);
 $table-head-font-color: #ffffff;
 // $table-head-font-weight: bold;
-$table-head-padding: em-calc(10 0 8 10, 14);
+$table-head-padding: em-calc(10 0 8 20, 14);
 
 // These control the row padding and font styles
 
-$table-row-padding: em-calc(20 0 20 10, 18);
+$table-row-padding: em-calc(20 0 20 20, 18);
 $table-row-font-size: em-calc(18);
 // $table-row-font-color: #222;
 // $table-line-height: em-calc(18);

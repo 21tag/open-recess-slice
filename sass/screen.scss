@@ -34,6 +34,8 @@ $dark-grey: #333333;
 $teal-lighter: #0697c7;
 $teal: #0584ad;
 $teal-darker: #045874;
+$green: #0ea023;
+$orange: #ef7805;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// FONTS //////////////////////////////////////////////////////////////////////////////
@@ -99,6 +101,10 @@ $teal-darker: #045874;
 		background-color:$dark-grey;
 		&:hover {background-color:$medium-grey}
 	}
+	// &.green {
+	// 	background-color:$green;
+	// 	&:hover {background-color:$medium-green}
+	// }
 	// Desktop sizes
 	@include media(desktop) {
 		&.medium {
@@ -109,6 +115,10 @@ $teal-darker: #045874;
 			font-size:em-calc(24);
 			color:white;
 		}
+		// &.small {
+		// 	font-size:em-calc(14);
+		// 	color:white;
+		// }
 	}
 	// Mobile sizes
 	@include media(mobile) {
@@ -122,6 +132,20 @@ $teal-darker: #045874;
 		}
 	}
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// LABELS ////////////////////////////////////////////////////////////////////////////
+
+.label {
+	border-radius:.35em; // overrides default Zurb label radius
+	&.green {
+		background-color:$green;
+	}
+	&.orange {
+		background-color:$orange;
+	}
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// CUSTOM FORM STYLES /////////////////////////////////////////////////////////////////////////
@@ -173,9 +197,20 @@ $teal-darker: #045874;
 /////// CUSTOM TABLE STYLES ////////////////////////////////////////////////////////////////////////////
 
 .open-recess-table { // Be sure to attach this class to any form that needs OpenRecess' custom form styles
+	width:100%;
 	@include sans-serif-medium;
 	thead {
 		text-transform: uppercase;
+	}
+	td.status {
+		padding-left:em-calc(10);
+	}
+	tr {
+		vertical-align:top;
+		border-bottom:1px solid $medium-grey;
+		&:last-child {
+			border-bottom:none;
+		}
 	}
 }
 
@@ -288,6 +323,24 @@ $teal-darker: #045874;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+/////// SUB NAV //////////////////////////////////////////////////////////////////////////
+
+.sub-nav {
+	@include sans-serif-medium;
+	font-size:em-calc(24);
+	margin-bottom:em-calc(10, 24);
+	li a {
+		color: $dark-grey;
+		&:hover {
+			color: $teal;
+		}
+	}
+	li.selected a {
+		color: $teal;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 /////// GOOGLE MAP //////////////////////////////////////////////////////////////////////////
 
 .google-map {
@@ -295,6 +348,7 @@ $teal-darker: #045874;
 	background:url('../img/sample-google-map.png') no-repeat 50% 25%;
 	margin-bottom:em-calc(20);
 }
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// GAME DETAIL /////////////////////////////////////////////////////////////////////////
@@ -435,6 +489,16 @@ $teal-darker: #045874;
 	}
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// MY GAMES /////////////////////////////////////////////////////////////////////////
+
+.my-games {
+	.invite-players {
+		text-decoration:underline;
+		display:block;
+		color:$dark-grey;
+	}
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -709,6 +773,20 @@ $teal-darker: #045874;
 		}
 	}
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// MY GAMES /////////////////////////////////////////////////////////////////////////
+
+	.my-games {
+		.label {
+			font-size:em-calc(14, 18);
+			padding:em-calc(8 15, 18)
+		}
+		.invite-players {
+			margin-top:em-calc(5, 18);
+			font-size:em-calc(12, 18);
+		}
+	}
+
 
 
 
@@ -804,10 +882,13 @@ $teal-darker: #045874;
 				h1 {
 					@include sans-serif-bold;
 					font-size:em-calc(36);
+					line-height: 1.2;
+					margin-bottom:em-calc(5,36);
 				}
 				time {
 					@include sans-serif-medium;
 					font-size:em-calc(24);
+					line-height:1.2;
 				}
 			}
 			img {
