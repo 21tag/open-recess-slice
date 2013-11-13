@@ -86,7 +86,7 @@ $body-font-color: #333333;
 
 // Make sure border radius matches unless we want it different.
 
-// $global-radius: 3px;
+$global-radius: 3px;
 // $global-rounded: 1000px;
 
 // Inset shadow shiny edges and depressions.
@@ -1108,7 +1108,7 @@ $inline-list-bottom-margin: em-calc(0);
 
 // We use these to control margin and padding
 
-// $sub-nav-list-margin: em-calc(-4 0 18);
+$sub-nav-list-margin: 0;
 // $sub-nav-list-padding-top: em-calc(4);
 
 // We use this to control the definition

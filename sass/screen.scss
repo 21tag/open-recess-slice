@@ -1,21 +1,6 @@
 @import "_normalize2.1.2", "foundation", "_tools", "_layout";
 
 
-/////// http://www.network-science.de/ascii/ // Style: doom //////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-// 	_____ _   _   ___  ______ ___________ 
-// /  ___| | | | / _ \ | ___ \  ___|  _  \
-// \ `--.| |_| |/ /_\ \| |_/ / |__ | | | |
-//  `--. \  _  ||  _  ||    /|  __|| | | |
-// /\__/ / | | || | | || |\ \| |___| |/ / 
-// \____/\_| |_/\_| |_/\_| \_\____/|___/  
-//
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// FOUNDATION OVERRIDES ///////////////////////////////////////////////////////////////
 
@@ -133,7 +118,7 @@ $orange: #ef7805;
 /////// LABELS ////////////////////////////////////////////////////////////////////////////
 
 .label {
-	border-radius:.35em; // overrides default Zurb label radius
+	border-radius:$global-radius; // overrides default Zurb label radius
 	&.green {
 		background-color:$green;
 	}
@@ -197,12 +182,54 @@ $orange: #ef7805;
 	thead {
 		text-transform: uppercase;
 	}
-	td.status {
-		padding-left:em-calc(10);
+	td {
+		
+		&.status {
+		
+		@include media(desktop) {
+			padding-left:em-calc(10);
+		}
+
+	}
+
 	}
 	tr {
 		vertical-align:top;
 		border-bottom:1px solid $medium-grey;
+	
+		@include media(mobile) {
+		margin:em-calc(30) 0; 
+			td {
+				padding: 0;
+				display:block;
+				width:100%;
+				&.confirmed-players {
+					padding-bottom:em-calc(30);
+					span {
+						display:inline !important;
+					}
+				}
+				&.status {
+					padding-top:em-calc(30);
+					margin-bottom:em-calc(10);
+					.invite-players {
+						font-size:em-calc(14);
+						display:inline;
+						margin-left:em-calc(8, 14);
+					}
+				}
+				&.game-type {
+					font-size:em-calc(18);
+					margin-bottom:em-calc(5, 18);
+				}
+				&.game-title {
+					font-size:em-calc(24);
+					line-height:1.1;
+					margin-bottom:em-calc(5, 24);
+				}
+			}
+		}
+
 		&:last-child {
 			border-bottom:none;
 		}
@@ -239,7 +266,6 @@ $orange: #ef7805;
 		}
 	}
 }
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -389,20 +415,27 @@ $orange: #ef7805;
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// SUB NAV //////////////////////////////////////////////////////////////////////////
 
-.sub-nav {
-	@include sans-serif-medium;
-	font-size:em-calc(24);
-	margin-bottom:em-calc(10, 24);
-	li a {
-		color: $dark-grey;
-		&:hover {
-			color: $teal;
+	.sub-nav {
+		@include sans-serif-medium;
+		dd.first {
+			margin-left:0;
+		}
+		font-size:em-calc(24);
+
+		@include media(desktop) {
+			margin-bottom:em-calc(20, 24);
+		}
+
+		a {
+			color:$dark-grey !important;
+		}
+		.active a {
+			color:white !important;
+			font-weight:normal !important;
+			border-radius:em-calc($global-radius, 24) !important;
 		}
 	}
-	li.selected a {
-		color: $teal;
-	}
-}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// GOOGLE MAP //////////////////////////////////////////////////////////////////////////
@@ -412,6 +445,114 @@ $orange: #ef7805;
 	background:url('../img/sample-google-map.png') no-repeat 50% 25%;
 	margin-bottom:em-calc(20);
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////// GAME TILE /////////////////////////////////////////////////////////////////////////
+	
+	.game-tiles {
+		
+		@include media(desktop) {
+			margin: 0 0 em-calc(20) em-calc(-20);
+		}
+
+		@include media(mobile) {
+			margin: 0 0 em-calc(20) 0;
+		}
+
+		.item {
+			
+			@include media(desktop) {
+				width:292px;
+				position:relative;
+				margin-bottom:em-calc(20);
+				margin-left:em-calc(20);
+				display: inline-block;
+				vertical-align:top;
+			}
+			
+			@include media(mobile) {
+				@include clearfix;
+				width:100%;
+				position:relative;
+				margin-bottom:em-calc(20);
+				border-bottom:1px solid $lightest-grey;
+				padding-bottom:em-calc(20);
+				padding-left:15px;
+				padding-right:15px;
+			}
+
+			a, a:hover, a:focus {
+				color:$dark-grey;
+			}
+			.caption {
+				
+				@include media(desktop) {
+					position:absolute;
+					bottom:0;
+					background-color:white;
+					opacity:.9;
+					width:100%;
+					padding:em-calc(10);
+				}
+				
+				h2 {
+					@include sans-serif-bold;
+					font-size:em-calc(12);
+					text-transform:uppercase;
+					margin-bottom:em-calc(5,12)
+				}
+				h1 {
+					@include sans-serif-bold;
+					
+					@include media(desktop) {
+						font-size:em-calc(24);
+						margin-bottom:em-calc(5,24)
+					}
+
+					@include media(mobile) {
+						font-size:em-calc(24);
+						line-height: 1.1;
+						margin-bottom:em-calc(5, 24);
+					}
+
+				}
+				time {
+					@include sans-serif-medium;
+					
+					@include media(desktop) {
+						font-size:em-calc(18);
+					}
+
+					@include media(mobile) {
+						font-size:em-calc(18);
+						line-height:1.2;
+					}
+
+				}
+			}
+			@include media(mobile) {
+				img {
+					float:right;
+					width:25%;
+					margin-left:20px;
+				}
+			}
+			&:hover {
+				img {
+					@include single-transition;
+					opacity: .7;
+				}
+				.caption {
+					opacity:1;
+					background-color:$teal;
+					color:white;
+					h1, h2 {
+						color:white;
+					}
+				}
+			}
+		}
+	}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -428,17 +569,54 @@ $orange: #ef7805;
 		h2 {
 			@include sans-serif-medium;
 			text-transform: uppercase;
+			font-size: em-calc(14);
+			margin-bottom:em-calc(10, 14);
+
 		}
 		h1 {
 			@include sans-serif-bold;
+			
+			@include media(desktop) {
+				font-size:em-calc(36);
+				margin-bottom:em-calc(10, 36);
+			}
+
+			@include media(mobile) {
+				font-size:em-calc(30);
+				margin-bottom:em-calc(10, 30);
+			}
+
 		}
 		time {
 			@include sans-serif-medium;
-			display:block;
+			display:block;	
+			font-size: em-calc(24);
+			margin-bottom: em-calc(20, 24);
+			
+			@include media(mobile) {
+				span {
+					display:inline !important;
+				}
+			}
+
 		}
 		.button-group {
-			margin-bottom: em-calc(20);
+			margin-bottom: em-calc(20);			
+			.settings-holder {
+				
+				@include media(desktop) {
+					display:inline;
+				}
+
+				@include media(mobile) {
+				display:block;
+				margin:em-calc(20 0)
+				}
+
+			}
+
 			.settings {
+				
 				height:2em;
 				vertical-align: bottom;
 				position:relative;
@@ -451,8 +629,17 @@ $orange: #ef7805;
 				.icon {
 					font-family:"heydings_iconsregular";
 					top:.1em;
-					font-size:2em;
-					padding:0;
+					
+					@include media(desktop) {
+						font-size:2em;
+						padding:0;
+					}
+
+					@include media(mobile) {
+						font-size:1.7em;
+						padding:.05em 0 0 0;
+					}
+
 					line-height: 0;
 					position:relative;
 				}
@@ -492,10 +679,22 @@ $orange: #ef7805;
 			}
 		}
 		.description {
-			@include serif-regular;
+			@include serif-regular;		
+			font-size:em-calc(24);
+			p {
+				margin-bottom: em-calc(24, 24);
+			}
 		}
 		.join-this-game {
-			margin-right:em-calc(5)
+			
+			@include media(desktop){
+				margin-right:em-calc(5)
+			}
+
+			@include media(mobile) {
+				margin-right:em-calc(5);
+			}
+
 		}
 	}
 	.players {
@@ -505,12 +704,47 @@ $orange: #ef7805;
 			background-color:$dark-grey;
 			color:white;
 			text-transform: uppercase;
+
+			@include media(desktop) {
+				font-size:em-calc(14);
+				padding:em-calc(10, 14) em-calc(20, 14);
+			}
+
+			@include media(mobile) {
+				font-size:em-calc(18);
+				padding:em-calc(10, 18) em-calc(10, 18);
+			}
+
 		}
 		.player-list {
-			background-color:$lightest-grey;
+			background-color:$lightest-grey;	
+			font-size:em-calc(18);
+			margin-bottom:em-calc(40, 18);
+			
+			@include media(desktop) {
+				padding-top:em-calc(10, 18);
+				padding-bottom:em-calc(30, 18);
+			}
+
+			@include media(mobile) {
+				padding-top:em-calc(0, 18);
+				padding-bottom:em-calc(10, 18);
+			}
+
 			.player {
 				display:inline-block;
 				vertical-align:top;
+
+				@include media(desktop) {
+					width:em-calc(272, 18);
+					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
+				}
+
+				@include media(mobile) {
+					width:em-calc(256, 18);
+					margin: em-calc(10, 18) 0 0 em-calc(10, 18);
+				}
+
 			}
 		}
 	}
@@ -519,12 +753,34 @@ $orange: #ef7805;
 		padding-top:em-calc(20);
 		.comment-form {
 			h1 {
-				@include sans-serif-medium;
+				@include sans-serif-bold;
 				text-transform:uppercase;
+
+				@include media(desktop) {
+					font-size:em-calc(14);
+					margin-bottom:em-calc(20, 14);
+				}
+
+				@include media(mobile) {
+					font-size:em-calc(18);
+					margin-bottom:em-calc(20, 18);
+				}
+
 			}
 			.comment-entry {
 				@include serif-regular;
 				width:100%;
+
+				@include media(desktop) {
+					font-size:em-calc(24);
+					padding:em-calc(20, 24)
+				}
+
+				@include media(mobile) {
+					font-size:em-calc(18);
+					padding:em-calc(20, 18);
+				}
+
 			}
 		}
 		.functions {
@@ -533,6 +789,21 @@ $orange: #ef7805;
 			.alert-me {
 				@include sans-serif-medium;
 				float:left;
+
+				@include media(desktop) {
+					font-size:em-calc(14);
+				}
+
+				@include media(mobile) {
+					font-size:em-calc(18);
+					span {
+						line-height:1.2;
+					}
+					.checkbox {
+						margin-bottom:0;
+					}
+				}
+
 			}
 			.button {
 				float:right;
@@ -542,20 +813,35 @@ $orange: #ef7805;
 			border-top:1px solid $dark-grey;
 			padding:em-calc(30) 0;
 			h1 {
-				@include sans-serif-medium;
+				@include sans-serif-medium;	
+				@include sans-serif-bold;
+				font-size:em-calc(18);
 			}
 			p {
 				@include serif-regular;
+				font-size:em-calc(18);
 				&:nth-last-child(2) {
 					margin-bottom:0
 				}
 			}
 			time {
 				@include sans-serif-medium;
+
+				@include media(desktop) {
+					font-size:em-calc(12);
+				}
+
+				@include media(mobile) {
+					font-size:em-calc(14);
+					margin-top:em-calc(4, 14);
+					display:block;
+				}
+
 			}
 		}
 	}
 }
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// MY GAMES /////////////////////////////////////////////////////////////////////////
@@ -588,12 +874,21 @@ $orange: #ef7805;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
-// ______ _____ _____ _   _______ ___________
-// |  _  \  ___/  ___| | / /_   _|  _  | ___ \
-// | | | | |__ \ `--.| |/ /  | | | | | | |_/ /
-// | | | |  __| `--. \    \  | | | | | |  __/ 
-// | |/ /| |___/\__/ / |\  \ | | \ \_/ / |    
-// |___/ \____/\____/\_| \_/ \_/  \___/\_|    
+//  
+//  ______ _____ _____ _   _______ ___________ 
+//  |  _  \  ___/  ___| | / /_   _|  _  | ___ \
+//  | | | | |__ \ `--.| |/ /  | | | | | | |_/ /
+//  | | | |  __| `--. \    \  | | | | | |  __/ 
+//  | |/ /| |___/\__/ / |\  \ | | \ \_/ / |    
+//  |___/ \____/\____/\_| \_/ \_/  \___/\_|    
+//  
+//   ___________ _____ _____ ___________ _____ _____ 
+//  /  ___| ___ \  ___/  __ \_   _|  ___|_   _/  __ \
+//  \ `--.| |_/ / |__ | /  \/ | | | |_    | | | /  \/
+//   `--. \  __/|  __|| |     | | |  _|   | | | |    
+//  /\__/ / |   | |___| \__/\_| |_| |    _| |_| \__/\
+//  \____/\_|   \____/ \____/\___/\_|    \___/ \____/
+//  
 //
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -601,11 +896,6 @@ $orange: #ef7805;
 
 
 @include media(desktop) {
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// START NAV BAR /////////////////////////////////////////////////////////////////////
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -615,7 +905,6 @@ $orange: #ef7805;
  		margin-top:em-calc(11);
  		text-align: left;
  	}
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -699,160 +988,26 @@ $orange: #ef7805;
 		}
 	}
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME TILES ///////////////////////////////////////////////////////////////////////
-
-
-	.game-tiles {
-		margin: 0 0 em-calc(20) em-calc(-20);
-		.item {
-			width:292px;
-			position:relative;
-			margin-bottom:em-calc(20);
-			margin-left:em-calc(20);
-			display: inline-block;
-			vertical-align:top;
-			a, a:hover, a:focus {
-				color:$dark-grey;
-			}
-			.caption {
-				position:absolute;
-				bottom:0;
-				background-color:white;
-				opacity:.9;
-				width:100%;
-				padding:em-calc(10);
-				h2 {
-					@include sans-serif-bold;
-					font-size:em-calc(12);
-					text-transform:uppercase;
-					margin-bottom:em-calc(5,12)
-				}
-				h1 {
-					@include sans-serif-bold;
-					font-size:em-calc(24);
-					margin-bottom:em-calc(5,24)
-				}
-				time {
-					@include sans-serif-medium;
-					font-size:em-calc(18);
-				}
-			}
-			&:hover {
-				img {
-					@include single-transition;
-					opacity: .7;
-				}
-				.caption {
-					opacity:1;
-					background-color:$teal;
-					color:white;
-					h1, h2 {
-						color:white;
-					}
-				}
-			}
-		}
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME DETAIL /////////////////////////////////////////////////////////////////////////
-
-	.game-detail {
-		.primary-info {
-			h2 {
-				font-size: em-calc(14);
-				margin-bottom:em-calc(10, 14);
-			}
-			h1 {
-				font-size:em-calc(36);
-				margin-bottom:em-calc(10, 36);
-			}
-			time {
-				font-size: em-calc(24);
-				margin-bottom: em-calc(20, 24);
-			}
-			.button-group {
-				.settings-holder {
-					display:inline;
-				}
-				
-			}
-			.description {
-				font-size:em-calc(24);
-				p {
-					margin-bottom: em-calc(20, 24);
-				}
-			}
-			.join-this-game {
-				margin-right:em-calc(5);
-			}
-		}
-		.players {
-			@include sans-serif-medium;
-			h1 {
-				font-size:em-calc(14);
-				padding:em-calc(10, 14) em-calc(20, 14);
-			}
-			.player-list {
-				font-size:em-calc(18);
-				margin-bottom:em-calc(40, 18);
-				padding-top:em-calc(10, 18);
-				padding-bottom:em-calc(30, 18);
-				.player {
-					width:em-calc(272, 18);
-					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
-				}
-			}
-		}
-		.comments {
-			.comment-form {
-				h1 {
-					font-size:em-calc(14);
-					margin-bottom:em-calc(20, 14);
-				}
-				.comment-entry {
-					font-size:em-calc(24);
-					padding:em-calc(20, 24)
-				}
-			}
-			.functions {
-				.alert-me {
-					font-size:em-calc(14);
-				}
-				.button {
-				}
-			}
-			.comment {
-				h1 {
-					font-size:em-calc(18);
-				}
-				p {
-					font-size:em-calc(18);
-					}
-				time {		
-					font-size:em-calc(12);
-				}
-			}
-		}
-	}
-
-
-
-
-
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
+// 
 // ___  ______________ _____ _      _____ 
 // |  \/  |  _  | ___ \_   _| |    |  ___|
 // | .  . | | | | |_/ / | | | |    | |__  
 // | |\/| | | | | ___ \ | | | |    |  __| 
 // | |  | \ \_/ / |_/ /_| |_| |____| |___ 
-// \_|  |_/\___/\____/ \___/\_____/\____/
+// \_|  |_/\___/\____/ \___/\_____/\____/ 
+// 
+//  ___________ _____ _____ ___________ _____ _____ 
+// /  ___| ___ \  ___/  __ \_   _|  ___|_   _/  __ \
+// \ `--.| |_/ / |__ | /  \/ | | | |_    | | | /  \/
+//  `--. \  __/|  __|| |     | | |  _|   | | | |    
+// /\__/ / |   | |___| \__/\_| |_| |    _| |_| \__/\
+// \____/\_|   \____/ \____/\___/\_|    \___/ \____/
+//
 //
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -887,6 +1042,20 @@ $orange: #ef7805;
 		}
 	}
 
+	#nav {
+		padding:0;
+		.row {
+			padding:0;
+		}
+		ul li {
+			padding-left:1em;
+			padding-bottom:3em;
+			a {
+				padding-left:0;
+			}
+		}
+	}
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////// TOP FILTER BAR //////////////////////////////////////////////////////////////////////
 
@@ -902,139 +1071,5 @@ $orange: #ef7805;
 		background-color:$lightest-grey;
 		padding: em-calc(20) 0 em-calc(20) 10px;
 	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME TILES //////////////////////////////////////////////////////////////////////
-
-	.game-tiles {
-		margin: 0 0 em-calc(20) 0;
-		.item {
-			@include clearfix;
-			width:100%;
-			position:relative;
-			margin-bottom:em-calc(20);
-			border-bottom:1px solid $lightest-grey;
-			padding-bottom:em-calc(20);
-			padding-left:15px;
-			padding-right:15px;
-			a, a:hover, a:focus {
-				color:$dark-grey;
-			}
-			.caption {
-				h1 {
-					@include sans-serif-bold;
-					font-size:em-calc(30);
-					line-height: 1.1;
-					margin-bottom:em-calc(5,30);
-				}
-				time {
-					@include sans-serif-medium;
-					font-size:em-calc(24);
-					line-height:1.2;
-				}
-			}
-			img {
-				float:right;
-				width:25%;
-				margin-left:20px;
-			}
-		}
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-/////// GAME DETAIL /////////////////////////////////////////////////////////////////////////
-
-	.game-detail {
-		.primary-info {
-			h2 {
-				font-size: em-calc(14);
-				margin-bottom:em-calc(10, 14);
-			}
-			h1 {
-				font-size:em-calc(36);
-				margin-bottom:em-calc(10, 36);
-			}
-			time {
-				font-size: em-calc(24);
-				margin-bottom: em-calc(20, 24);
-				span {
-					display:inline !important;
-				}
-			}
-			.button-group {
-				.settings-holder {
-					display:block;
-					margin:em-calc(20 0)
-				}
-			}
-			.description {
-				font-size:em-calc(24);
-				p {
-					margin-bottom: em-calc(24, 24);
-				}
-			}
-			.join-this-game {
-				margin-right:em-calc(5);
-			}
-		}
-		.players {
-			@include sans-serif-medium;
-			h1 {
-				font-size:em-calc(18);
-				padding:em-calc(10, 18) em-calc(20, 18);
-			}
-			.player-list {
-				font-size:em-calc(18);
-				margin-bottom:em-calc(40, 18);
-				padding-top:em-calc(10, 18);
-				padding-bottom:em-calc(30, 18);
-				.player {
-					width:em-calc(256, 18);
-					margin: em-calc(10, 18) 0 0 em-calc(20, 18);
-				}
-			}
-		}
-		.comments {
-			.comment-form {
-				h1 {
-					font-size:em-calc(24);
-					margin-bottom:em-calc(20, 24);
-				}
-				.comment-entry {
-					font-size:em-calc(18);
-					padding:em-calc(20, 18);
-				}
-			}
-			.functions {
-				.alert-me {
-					font-size:em-calc(18);
-					span {
-						line-height:1.2;
-					}
-					.checkbox {
-						margin-bottom:0;
-					}
-				}
-				.button {
-				}
-			}
-			.comment {
-				h1 {
-					@include sans-serif-bold;
-					font-size:em-calc(18);
-				}
-				p {
-					font-size:em-calc(18);
-					}
-				time {		
-					font-size:em-calc(14);
-					margin-top:em-calc(4, 14);
-					display:block;
-				}
-			}
-		}
-	}
-
-
 
 }
