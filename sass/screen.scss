@@ -469,6 +469,10 @@ $orange: #ef7805;
 				display: inline-block;
 				vertical-align:top;
 			}
+
+			a, a:hover, a:focus {
+				color:$dark-grey;
+			}
 			
 			@include media(mobile) {
 				@include clearfix;
@@ -481,9 +485,7 @@ $orange: #ef7805;
 				padding-right:15px;
 			}
 
-			a, a:hover, a:focus {
-				color:$dark-grey;
-			}
+
 			.caption {
 				
 				@include media(desktop) {
@@ -493,6 +495,22 @@ $orange: #ef7805;
 					opacity:.9;
 					width:100%;
 					padding:em-calc(10);
+
+					&:hover {
+						img {
+							@include single-transition;
+							opacity: .7;
+						}
+						.caption {
+							opacity:1;
+							background-color:$teal;
+							color:white;
+							h1, h2 {
+								color:white;
+							}
+						}
+					}
+
 				}
 				
 				h2 {
@@ -537,20 +555,7 @@ $orange: #ef7805;
 					margin-left:20px;
 				}
 			}
-			&:hover {
-				img {
-					@include single-transition;
-					opacity: .7;
-				}
-				.caption {
-					opacity:1;
-					background-color:$teal;
-					color:white;
-					h1, h2 {
-						color:white;
-					}
-				}
-			}
+
 		}
 	}
 
